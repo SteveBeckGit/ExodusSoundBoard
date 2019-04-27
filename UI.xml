@@ -1,0 +1,71 @@
+<Ui>
+  <Script file="main.lua"/>
+  <Frame name="PutItInFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true">
+    <Scripts>
+     <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+     <OnDragStart>self:StartMoving();</OnDragStart>
+     <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+    </Scripts>
+
+    <Size x="270" y="80"/>
+
+    <Anchors><Anchor point="CENTER"/></Anchors>
+
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+  		edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+  		<BackgroundInsets>
+  			<AbsInset left="11" right="12" top="12" bottom="11"/>
+  		</BackgroundInsets>
+  		<TileSize><AbsValue val="32"/></TileSize>
+  		<EdgeSize><AbsValue val="32"/></EdgeSize>
+  	</Backdrop>
+
+    <Layers>
+      <!-- Window Header -->
+  		<Layer level="ARTWORK">
+    			<Texture file="Interface\DialogFrame\UI-DialogBox-Header">
+    				<Size><AbsDimension x="370" y="64"/></Size>
+    				<Anchors>
+    					<Anchor point="TOP">
+    					<Offset><AbsDimension x="0" y="12"/></Offset>
+    					</Anchor>
+    				</Anchors>
+    			</Texture>
+    		</Layer>
+    		<Layer level="OVERLAY">
+    			<FontString inherits="GameFontNormal" text="Exodus Sound Board">
+    				<Anchors>
+    					<Anchor point="TOP" relativeTo="$parent"></Anchor>
+    				</Anchors>
+    			</FontString>
+    		</Layer>
+    	</Layers>
+
+      <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
+      <Frames>
+        <Button inherits="UIPanelButtonTemplate" name="redwrench">
+          <NormalTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun"/>
+          <HighlightTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun" alphaMode="ADD"/>
+          <PushedTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun" alphaMode="MOD"/>
+          <Size x="48" y="48"/>
+          <Anchors><Anchor point="BOTTOMLEFT" x="10" y="10"/></Anchors>
+          <Scripts>
+    				<OnClick>if (UnitExists("target")) then SendChatMessage("WarrenKappa", "WHISPER", nil, GetUnitName("target", 1)) end;</OnClick>
+    			</Scripts>
+        </Button>
+        
+        <!-- close button -->
+        <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text=" X">
+          <Size x="32" y="16"/>
+        			<Anchors>
+        				<Anchor point="TOPRIGHT">
+        				<Offset><AbsDimension x="0" y="0"/></Offset>
+        				</Anchor>
+        			</Anchors>
+        			<Scripts>
+        				<OnClick>PutItInFrame:Hide(); </OnClick>
+        			</Scripts>
+        		</Button>
+      </Frames>
+  </Frame>
+</Ui>
