@@ -11,15 +11,9 @@ SlashCmdList["ESB"] = function(msg)
       PutItInFrame:Show()
       f:RegisterEvent("CHAT_MSG_WHISPER")
     end
-  end
+  end 
 
-  
 
-  function f:CHAT_MSG_RAID(msg)
-    if msg == "Wed Wench" then     
-      PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\1_red_wrench.ogg")
-    end
-  end
   
   function f:CHAT_MSG_WHISPER(msg)
     -- PlaySound(5274)
@@ -36,4 +30,6 @@ SlashCmdList["ESB"] = function(msg)
     end
    
   end
+
+  
   
