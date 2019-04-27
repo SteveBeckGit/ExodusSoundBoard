@@ -1,15 +1,15 @@
 local f = CreateFrame("Frame")
 f:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
-
+f:RegisterEvent("CHAT_MSG_WHISPER")
 -- setting up slash commands and show/hide functionality
 SLASH_ESB1 = "/ESB"
 SlashCmdList["ESB"] = function(msg)
     if (PutItInFrame:IsShown()) then
       PutItInFrame:Hide()
-      f:UnregisterEvent("CHAT_MSG_WHISPER")
+   
     else
       PutItInFrame:Show()
-      f:RegisterEvent("CHAT_MSG_WHISPER")
+     
     end
   end 
 
