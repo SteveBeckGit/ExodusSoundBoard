@@ -21,6 +21,11 @@ SlashCmdList["ESB"] = function(msg)
       PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\2_warrenKappa.ogg","Master")
       
     end
+
+    if msg == "Wed Wench" then
+      RaidNotice_AddMessage(RaidWarningFrame, "Wed Wench", color)
+      PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\1_red_wrench.ogg")
+    end
    
   end
   
