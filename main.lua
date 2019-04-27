@@ -11,7 +11,9 @@ SlashCmdList["ESB"] = function(msg)
       PutItInFrame:Show()
       f:RegisterEvent("CHAT_MSG_WHISPER")
     end
-  end
+  end 
+
+
   
   function f:CHAT_MSG_WHISPER(msg)
     -- PlaySound(5274)
@@ -28,4 +30,6 @@ SlashCmdList["ESB"] = function(msg)
     end
    
   end
+
+  
   
