@@ -41,29 +41,9 @@
     		</Layer>
     	</Layers>
 
-      <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
+      
       <Frames>
-        <Button inherits="UIPanelButtonTemplate" name="ooph">
-          <NormalTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun"/>
-          <HighlightTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun" alphaMode="ADD"/>
-          <PushedTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun" alphaMode="MOD"/>
-          <Size x="48" y="48"/>
-          <Anchors><Anchor point="BOTTOMLEFT" x="10" y="10"/></Anchors>
-          <Scripts>
-    				<OnClick>if (UnitExists("target")) then SendChatMessage("WarrenKappa", "WHISPER", nil, GetUnitName("target", 1)) end;</OnClick>
-    			</Scripts>
-        </Button>
-
-				<Button inherits="UIPanelButtonTemplate" name="redwrench">
-          <NormalTexture file="INTERFACE/ICONS/spell_mekkatorque_bot_redwrench"/>
-          <HighlightTexture file="INTERFACE/ICONS/spell_mekkatorque_bot_redwrench" alphaMode="ADD"/>
-          <PushedTexture file="INTERFACE/ICONS/spell_mekkatorque_bot_redwrench" alphaMode="MOD"/>
-          <Size x="48" y="48"/>
-          <Anchors><Anchor point="RIGHT" relativeTo="ooph" x="50"/></Anchors>
-          <Scripts>
-    				<OnClick>if (UnitExists("target")) then SendChatMessage("Wed Wench", "WHISPER", nil, GetUnitName("target", 1)) end;</OnClick>
-    			</Scripts>
-        </Button>
+        
         
         <!-- close button -->
         <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text=" X">
