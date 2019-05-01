@@ -7,7 +7,7 @@ frame:RegisterEvent("CHAT_MSG_WHISPER")
 frame:RegisterEvent("CHAT_MSG_PARTY");-- Register our event
 frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives event triggers
     if checkChat(event) and string.find(msg,"Wed Wench") then-- Someone sends "Wed Wench" in /raid
-        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\1_red_wrench.ogg")
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\1_red_wrench.ogg","Master")
     end
 
     if checkChat(event) and string.find(msg,"KappaWarren") then-- Someone sends "Wed Wench" in /raid
