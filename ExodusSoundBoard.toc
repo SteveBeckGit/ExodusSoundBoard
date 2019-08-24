@@ -1,7 +1,8 @@
-## Interface: 80100
+## Interface: 80200
 ## Title: Exodus Sound Board
 ## Author: Stan
 ## Version: 0.1
 
 UI.xml
 listener.lua
+deathListener.lua
