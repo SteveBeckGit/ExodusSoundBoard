@@ -1,9 +1,11 @@
 # ExodusSoundBoard
 Sound board for the exodus wow community
+Keywords which trigger audio files - what fun.
 
-Usage:
-/ESB
-Select a player or yourself and then choose an action
+Commands List:
 
-Current Sounds:
-~ Ghuun orb placement - aka Warren is putting it in.
+KappaWarren
+Wed Wench
+HowManyWeeks
+KiltPride
+NotTheBelt
