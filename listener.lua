@@ -27,12 +27,24 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
     if checkChat(event) and string.find(msg,"HowManyWeeks") then-- 
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\HowManyWeeks.ogg","Master")
     end
+
+    if checkChat(event) and string.find(msg, "Bruce") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ThanksBruce.ogg","Master")
+    end
    
     
 end);
 
 function checkChat(event)
-    if (event=="CHAT_MSG_RAID" or event=="CHAT_MSG_SAY" or event=="CHAT_MSG_WHISPER" or event=="CHAT_MSG_GUILD" or event=="CHAT_MSG_PARTY" or event =="CHAT_MSG_BN_WHISPER" or event=="CHAT_MSG_RAID_LEADER" or event=="CHAT_MSG_PARTY_LEADER") then
+    if (event=="CHAT_MSG_RAID" 
+    or event=="CHAT_MSG_SAY" 
+    or event=="CHAT_MSG_WHISPER" 
+    or event=="CHAT_MSG_GUILD" 
+    or event=="CHAT_MSG_PARTY" 
+    or event =="CHAT_MSG_BN_WHISPER" 
+    or event=="CHAT_MSG_RAID_LEADER" 
+    or event=="CHAT_MSG_PARTY_LEADER")
+     then
         return true
     else return false
     end    
