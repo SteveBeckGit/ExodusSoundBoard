@@ -43,6 +43,23 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
     if checkChat(event) and string.find(msg, "STFU") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\stfu.ogg","Master")
     end
+
+    if checkChat(event) and string.find(msg, "Oooh") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\oooh.ogg","Master")
+    end
+
+    if checkChat(event) and string.find(msg, "Slipped") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\it_slipped.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "Blowout") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\big_winter_dk_blowout.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "Ree") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ree.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "Oww") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\oww.ogg","Master")
+    end
    
     
 end);
