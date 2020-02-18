@@ -23,7 +23,7 @@ SlashCmdList["ESB"] = function(msg)
     print("<ESB> Champion!")
     print("<ESB> FFS Ryno")
     print("<ESB> Popcorn")
-    print("<ESB> sorrysorrysorrysorry")
+    print("<ESB> Sorry")
     print("<ESB> What...?")
 
    
