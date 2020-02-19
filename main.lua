@@ -24,8 +24,18 @@ SlashCmdList["ESB"] = function(msg)
     print("<ESB> FFS Ryno")
     print("<ESB> Popcorn")
     print("<ESB> Sorry")
-    print("<ESB> What...?")
-
+    print("<ESB> GoodJob")
+    print("<ESB> HiThere")
+    print("<ESB> Zuma")
+    print("<ESB> FancyMeeting")
+    print("<ESB> Hard")
+    print("<ESB> ArranRee")
+    print("<ESB> First time?")
+    print("<ESB> WarrenGasm")
+    print("<ESB> OnceItIn")
+    print("<ESB> TooSoon")
+    print("<ESB> ScrewYou")
+    print("<ESB> Ree2")
    
   end 
 

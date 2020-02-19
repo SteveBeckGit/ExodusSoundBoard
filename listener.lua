@@ -76,13 +76,49 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
     if checkChat(event) and string.find(msg, "Sorry") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sorry.ogg","Master")
     end
-    if checkChat(event) and string.find(msg, "What...?") then
+    if checkChat(event) and string.find(msg, "What?") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\What.ogg","Master")
     end
     if checkChat(event) and string.find(msg, "Bastard") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bastard.ogg","Master")
     end
-   
+    --------------------
+    if checkChat(event) and string.find(msg, "GoodJob") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\GoodJobEdited.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "HiThere") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\HiThere.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "Zuma") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Zuma.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "FancyMeeting") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FancyMeetingYouHere.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "Hard") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Hard.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "ArranRee") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ArranRee.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "First time?") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FirstTime.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "WarrenGasm") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WarrenGasm.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "OnceItIn") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OnceItIn.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "TooSoon") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\TooSoon.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "ScrewYou") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ScrewAllOfYou.ogg","Master")
+    end
+    if checkChat(event) and string.find(msg, "Ree2") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Ree2.ogg","Master")
+    end
    
     
 end);
