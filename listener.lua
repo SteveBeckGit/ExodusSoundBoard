@@ -108,7 +108,7 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WarrenGasm.ogg","Master")
     end
     if checkChat(event) and string.find(msg, "OnceItIn") then
-        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OnceItIn.ogg","Master")
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OnceItsIn.ogg","Master")
     end
     if checkChat(event) and string.find(msg, "TooSoon") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\TooSoon.ogg","Master")
