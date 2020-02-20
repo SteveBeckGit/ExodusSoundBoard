@@ -67,9 +67,6 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
     if checkChat(event) and string.find(msg, "Champion!") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Champion.ogg","Master")
     end
-    if checkChat(event) and string.find(msg, "FFS Ryno") then
-        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FFSRyno.ogg","Master")
-    end
     if checkChat(event) and string.find(msg, "Popcorn") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\popcorn.ogg","Master")
     end
