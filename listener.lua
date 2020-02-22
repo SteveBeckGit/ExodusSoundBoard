@@ -98,7 +98,7 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
     if checkChat(event) and string.find(msg, "ArranRee") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ArranRee.ogg","Master")
     end
-    if checkChat(event) and string.find(msg, "First time?") then
+    if checkChat(event) and string.find(msg, "First Time?") then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FirstTime.ogg","Master")
     end
     if checkChat(event) and string.find(msg, "WarrenGasm") then
