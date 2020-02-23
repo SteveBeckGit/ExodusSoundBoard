@@ -7,7 +7,7 @@
      <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
     </Scripts>
 
-    <Size x="270" y="80"/>
+    <Size x="260" y="383"/>
 
     <Anchors><Anchor point="CENTER"/></Anchors>
 
@@ -41,9 +41,371 @@
     		</Layer>
     	</Layers>
 
-      
+      <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
       <Frames>
-        
+	  	<!-- row 1 -->
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_mekkatorque_bot_redwrench"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_mekkatorque_bot_redwrench" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_mekkatorque_bot_redwrench" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-30"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[1][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun"/>
+			<HighlightTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/achievement_nazmir_boss_ghuun" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-30"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[2][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv_belt_04"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv_belt_04" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv_belt_04" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-30"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[3][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/achievement_doublerainbow"/>
+			<HighlightTexture file="INTERFACE/ICONS/achievement_doublerainbow" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/achievement_doublerainbow" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-30"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[4][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv_misc_questionmark"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv_misc_questionmark" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv_misc_questionmark" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-30"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[5][1])</OnClick>
+			</Scripts>
+        </Button>
+
+		<!-- row 2 -->
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/achievement_worldevent_thanksgiving"/>
+			<HighlightTexture file="INTERFACE/ICONS/achievement_worldevent_thanksgiving" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/achievement_worldevent_thanksgiving" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-78"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[6][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_fixated_state_blue"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_fixated_state_blue" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_fixated_state_blue" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-78"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[7][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_frost_manaburn"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_frost_manaburn" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_frost_manaburn" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-78"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[8][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_misc_emotionangry"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_misc_emotionangry" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_misc_emotionangry" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-78"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[9][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_misc_emotionhappy"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_misc_emotionhappy" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_misc_emotionhappy" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-78"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[10][1])</OnClick>
+			</Scripts>
+        </Button>
+
+		<!-- row 3 -->
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv_babytentacleface"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv_babytentacleface" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv_babytentacleface" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-126"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[11][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_deathknight_remorselesswinters2"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_deathknight_remorselesswinters2" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_deathknight_remorselesswinters2" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-126"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[12][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/warrior_disruptingshout"/>
+			<HighlightTexture file="INTERFACE/ICONS/warrior_disruptingshout" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/warrior_disruptingshout" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-126"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[13][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_fomor_boss_shout"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_fomor_boss_shout" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_fomor_boss_shout" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-126"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[14][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_warrior_battleshout"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_warrior_battleshout" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_warrior_battleshout" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-126"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[15][1])</OnClick>
+			</Scripts>
+        </Button>
+
+		<!-- row 4 -->
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_holy_painsupression"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_holy_painsupression" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_holy_painsupression" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-174"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[16][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_nature_bloodlust"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_nature_bloodlust" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_nature_bloodlust" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-174"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[17][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv__faction_championsofazeroth"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv__faction_championsofazeroth" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv__faction_championsofazeroth" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-174"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[18][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv_misc_popcorntoy"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv_misc_popcorntoy" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv_misc_popcorntoy" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-174"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[19][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_misc_emotionafraid"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_misc_emotionafraid" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_misc_emotionafraid" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-174"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[20][1])</OnClick>
+			</Scripts>
+        </Button>
+
+		<!-- row 5 -->
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_rogue_surpriseattack"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_rogue_surpriseattack" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_rogue_surpriseattack" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-222"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[21][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_warrior_commandingshout"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_warrior_commandingshout" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_warrior_commandingshout" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-222"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[22][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/thumbsup"/>
+			<HighlightTexture file="INTERFACE/ICONS/thumbsup" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/thumbsup" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-222"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[23][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_paladin_handoflight"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_paladin_handoflight" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_paladin_handoflight" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-222"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[24][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv_helm_laughingskull_01"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv_helm_laughingskull_01" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv_helm_laughingskull_01" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-222"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[25][1])</OnClick>
+			</Scripts>
+        </Button>
+
+		<!-- row 6 -->
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv_garrison_hearthstone"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv_garrison_hearthstone" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv_garrison_hearthstone" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-270"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[26][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_backstab"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_backstab" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_backstab" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-270"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[27][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times"/>
+			<HighlightTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-270"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[28][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_warrior_rampage"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_warrior_rampage" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_warrior_rampage" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-270"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[29][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth"/>
+			<HighlightTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-270"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[30][1])</OnClick>
+			</Scripts>
+        </Button>
+
+		<!-- row 7 -->
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/spell_holy_borrowedtime"/>
+			<HighlightTexture file="INTERFACE/ICONS/spell_holy_borrowedtime" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/spell_holy_borrowedtime" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-318"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[31][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/inv_misc_screwdriver_01"/>
+			<HighlightTexture file="INTERFACE/ICONS/inv_misc_screwdriver_01" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/inv_misc_screwdriver_01" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-318"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[32][1])</OnClick>
+			</Scripts>
+        </Button>
+		<!-- <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times"/>
+			<HighlightTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-318"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[33][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/ability_warrior_rampage"/>
+			<HighlightTexture file="INTERFACE/ICONS/ability_warrior_rampage" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/ability_warrior_rampage" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-318"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[34][1])</OnClick>
+			</Scripts>
+        </Button>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth"/>
+			<HighlightTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-318"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[35][1])</OnClick>
+			</Scripts>
+        </Button> -->
         
         <!-- close button -->
         <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text=" X">
