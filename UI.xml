@@ -7,7 +7,7 @@
      <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
     </Scripts>
 
-    <Size x="260" y="383"/>
+    <Size x="260" y="431"/>
 
     <Anchors><Anchor point="CENTER"/></Anchors>
 
@@ -315,9 +315,9 @@
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
-			<NormalTexture file="INTERFACE/ICONS/ability_backstab"/>
-			<HighlightTexture file="INTERFACE/ICONS/ability_backstab" alphaMode="ADD"/>
-			<PushedTexture file="INTERFACE/ICONS/ability_backstab" alphaMode="MOD"/>
+			<NormalTexture file="INTERFACE/ICONS/Inv_pet_maggot"/>
+			<HighlightTexture file="INTERFACE/ICONS/Inv_pet_maggot" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/Inv_pet_maggot" alphaMode="MOD"/>
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="58" y="-270"/></Anchors>
 			<Scripts>
@@ -376,10 +376,10 @@
 				<OnClick>SendAllAddonMessages(soundTable[32][1])</OnClick>
 			</Scripts>
         </Button>
-		<!-- <Button inherits="UIPanelButtonTemplate">
-			<NormalTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times"/>
-			<HighlightTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times" alphaMode="ADD"/>
-			<PushedTexture file="INTERFACE/ICONS/achievement_bg_win_av_x_times" alphaMode="MOD"/>
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood"/>
+			<HighlightTexture file="INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood" alphaMode="MOD"/>
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="106" y="-318"/></Anchors>
 			<Scripts>
@@ -387,9 +387,9 @@
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
-			<NormalTexture file="INTERFACE/ICONS/ability_warrior_rampage"/>
-			<HighlightTexture file="INTERFACE/ICONS/ability_warrior_rampage" alphaMode="ADD"/>
-			<PushedTexture file="INTERFACE/ICONS/ability_warrior_rampage" alphaMode="MOD"/>
+			<NormalTexture file="INTERFACE/ICONS/INV_Relics_TotemofRage"/>
+			<HighlightTexture file="INTERFACE/ICONS/INV_Relics_TotemofRage" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/INV_Relics_TotemofRage" alphaMode="MOD"/>
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="154" y="-318"/></Anchors>
 			<Scripts>
@@ -397,16 +397,68 @@
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
-			<NormalTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth"/>
-			<HighlightTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth" alphaMode="ADD"/>
-			<PushedTexture file="INTERFACE/ICONS/achievement_nzothraid_nzoth" alphaMode="MOD"/>
+			<NormalTexture file="INTERFACE/ICONS/Spell_Holy_FistOfJustice"/>
+			<HighlightTexture file="INTERFACE/ICONS/Spell_Holy_FistOfJustice" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/Spell_Holy_FistOfJustice" alphaMode="MOD"/>
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="202" y="-318"/></Anchors>
 			<Scripts>
 				<OnClick>SendAllAddonMessages(soundTable[35][1])</OnClick>
 			</Scripts>
+        </Button>
+		
+		<!-- row 8 -->
+		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/Spell_Shaman_GiftEarthmother"/>
+			<HighlightTexture file="INTERFACE/ICONS/Spell_Shaman_GiftEarthmother" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/Spell_Shaman_GiftEarthmother" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="10" y="-366"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[36][1])</OnClick>
+			</Scripts>
+        </Button>
+        		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/INV_Misc_Toy_07"/>
+			<HighlightTexture file="INTERFACE/ICONS/INV_Misc_Toy_07" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/INV_Misc_Toy_07" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="58" y="-366"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[37][1])</OnClick>
+			</Scripts>
+        </Button>
+        		<Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/INV_Pet_DiseasedBearCub"/>
+			<HighlightTexture file="INTERFACE/ICONS/INV_Pet_DiseasedBearCub" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/INV_Pet_DiseasedBearCub" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="106" y="-366"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[38][1])</OnClick>
+			</Scripts>
+        </Button>
+        <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/INV_Misc_Head_Centaur_01"/>
+			<HighlightTexture file="INTERFACE/ICONS/INV_Misc_Head_Centaur_01" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/INV_Misc_Head_Centaur_01" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="154" y="-366"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[39][1])</OnClick>
+			</Scripts>
+        </Button>
+		<!-- <Button inherits="UIPanelButtonTemplate">
+			<NormalTexture file="INTERFACE/ICONS/INV_Misc_Head_Centaur_01"/>
+			<HighlightTexture file="INTERFACE/ICONS/INV_Misc_Head_Centaur_01" alphaMode="ADD"/>
+			<PushedTexture file="INTERFACE/ICONS/INV_Misc_Head_Centaur_01" alphaMode="MOD"/>
+			<Size x="48" y="48"/>
+			<Anchors><Anchor point="TOPLEFT" x="202" y="-366"/></Anchors>
+			<Scripts>
+				<OnClick>SendAllAddonMessages(soundTable[35][1])</OnClick>
+			</Scripts>
         </Button> -->
-        
+
         <!-- close button -->
         <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text=" X">
           <Size x="32" y="16"/>

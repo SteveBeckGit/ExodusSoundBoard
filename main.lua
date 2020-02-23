@@ -29,12 +29,19 @@ soundTable = {
   {"HiThere","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\HiThere.ogg","INTERFACE/ICONS/ability_paladin_handoflight"},
   {"Zuma","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Zuma.ogg","INTERFACE/ICONS/inv_helm_laughingskull_01"},
   {"FancyMeeting","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FancyMeetingYouHere.ogg","INTERFACE/ICONS/inv_garrison_hearthstone"},
-  {"Hard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Hard.ogg","INTERFACE/ICONS/ability_backstab"},
+  {"Hard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Hard.ogg","INTERFACE/ICONS/INV_Pet_Maggot"},
   {"FirstTime","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FirstTime.ogg","INTERFACE/ICONS/achievement_bg_win_av_x_times"},
   {"WarrenGasm","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WarrenGasm.ogg","INTERFACE/ICONS/ability_warrior_rampage"},
   {"OnceItsIn","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OnceItsIn.ogg","INTERFACE/ICONS/achievement_nzothraid_nzoth"},
   {"TooSoon","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\TooSoon.ogg","INTERFACE/ICONS/spell_holy_borrowedtime"},
-  {"ScrewYou","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ScrewAllOfYou.ogg","INTERFACE/ICONS/inv_misc_screwdriver_01"}
+  {"ScrewYou","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ScrewAllOfYou.ogg","INTERFACE/ICONS/inv_misc_screwdriver_01"},
+  {"Kos","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Kos.ogg","INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood"},
+  {"OhYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OhYeah.ogg","INTERFACE/ICONS/INV_Relics_TotemofRage"},
+  {"ArranYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ArranYeah.ogg","INTERFACE/ICONS/Spell_Holy_FistOfJustice"},
+  {"KiltPriide","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\KiltPride2.ogg","INTERFACE/ICONS/Spell_Shaman_GiftEarthmother"},
+  {"Welcome","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Welcome.ogg","INTERFACE/ICONS/INV_Misc_Toy_07"},
+  {"Receive","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Receive.ogg","INTERFACE/ICONS/INV_Pet_DiseasedBearCub"},
+  {"WTF","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/INV_Misc_Head_Centaur_01"},
 }
 addonPrefix = "ESB1337"
 
@@ -57,6 +64,7 @@ function printWelcomeMessage()
   print("<ESB> Wed Wench")
   print("<ESB> KappaWarren")
   print("<ESB> KiltPride")
+  print("<ESB> KiltPriide")
   print("<ESB> Blue")
   print("<ESB> HowManyWeeks")
   print("<ESB> NotTheBelt")
@@ -68,6 +76,8 @@ function printWelcomeMessage()
   print("<ESB> Slipped")
   print("<ESB> Blowout")
   print("<ESB> Ree")
+  print("<ESB> ArranRee")
+  print("<ESB> ArranYeah")
   print("<ESB> Bloodlust")
   print("<ESB> Champion!")
   print("<ESB> Popcorn")
@@ -77,13 +87,18 @@ function printWelcomeMessage()
   print("<ESB> Zuma")
   print("<ESB> FancyMeeting")
   print("<ESB> Hard")
-  print("<ESB> ArranRee")
   print("<ESB> FirstTime")
   print("<ESB> WarrenGasm")
   print("<ESB> OnceItsIn")
   print("<ESB> TooSoon")
   print("<ESB> ScrewYou")
-  print("<ESB> Ree2")
+  print("<ESB> OhYeah")
+  print("<ESB> Kos")
+  print("<ESB> OhYeah")
+  print("<ESB> Receive")
+  print("<ESB> Welcome")
+  print("<ESB> WTF")
+
 end
 
 function SendAllAddonMessages(command)
