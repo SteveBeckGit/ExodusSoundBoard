@@ -7,13 +7,9 @@ frame:RegisterEvent("CHAT_MSG_SAY");
 frame:RegisterEvent("CHAT_MSG_WHISPER");
 frame:RegisterEvent("CHAT_MSG_BN_WHISPER");
 frame:RegisterEvent("CHAT_MSG_PARTY");-- Register our event
-frame:RegisterEvent("CHAT_MSG_ADDON");
-C_ChatInfo.RegisterAddonMessagePrefix(addonPrefix)
-frame:SetScript("OnEvent",function(self,event,prefix,msg)-- OnEvent handler receives event triggers
+frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives event triggers
 
     if (isChatEvent(event)) then
-        playSoundIfExists(prefix) --prefix is actually msg, normal chat events only have 2 parameters (event, msg)
-    elseif isUiEvent(event, prefix) then
         playSoundIfExists(msg)
     end
 
@@ -43,13 +39,6 @@ function isChatEvent(event)
     else 
         return false
     end    
-end
-
-function isUiEvent(event, prefix)
-    if (event=="CHAT_MSG_ADDON" and prefix == addonPrefix) then
-        return true
-    end
-    return false
 end
 
 
