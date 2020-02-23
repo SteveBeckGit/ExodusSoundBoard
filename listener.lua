@@ -12,7 +12,7 @@ C_ChatInfo.RegisterAddonMessagePrefix(addonPrefix)
 frame:SetScript("OnEvent",function(self,event,prefix,msg)-- OnEvent handler receives event triggers
 
     if (isChatEvent(event)) then
-        playSoundIfExists(prefix)
+        playSoundIfExists(prefix) --prefix is actually msg, normal chat events only have 2 parameters (event, msg)
     elseif isUiEvent(event, prefix) then
         playSoundIfExists(msg)
     end

@@ -88,6 +88,11 @@ end
 
 function SendAllAddonMessages(command)
   if (UnitExists("target")) then C_ChatInfo.SendAddonMessage(addonPrefix, command, "WHISPER", GetUnitName("target", 1)) end;
-  C_ChatInfo.SendAddonMessage(addonPrefix, command, "RAID")
-  C_ChatInfo.SendAddonMessage(addonPrefix, command, "PARTY")
+  if (IsInRaid()) then
+    C_ChatInfo.SendAddonMessage(addonPrefix, command, "RAID")
+  elseif (IsInGroup()) then
+    C_ChatInfo.SendAddonMessage(addonPrefix, command, "PARTY")
+  else
+    C_ChatInfo.SendAddonMessage(addonPrefix, command, "WHISPER", GetUnitName("player", 1))
+  end
 end
