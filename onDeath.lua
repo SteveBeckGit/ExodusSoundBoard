@@ -1,15 +1,19 @@
-local eventCapture=CreateFrame("BossFrame");-- Need a frame to capture events
-frame:RegisterEvent("ENCOUNTER_END");
-frame:RegisterEvent("PLAYER_DEAD");
+local eventCapture=CreateFrame("Frame");-- Need a frame to capture events
+eventCapture:RegisterEvent("ENCOUNTER_END");
 
-frame:SetScript("OnEvent",function(self,event)
-    if(checkStatus(event)) then
-        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\mana.ogg","Master")
+eventCapture:SetScript("OnEvent",function(self,event, ...)
+    local encounterId, encounterName, difficultyID, groupSize, success = ...;
+    if(checkStatus(event, success)) then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BadGuysWin.ogg","Master")
     end
 end);
 
-function checkStatus(event)
-    if (event=="ENCOUNTER_END"    
+
+
+
+
+function checkStatus(event, success)
+    if (event=="ENCOUNTER_END"  and success == 0  
     )
      then
         return true
