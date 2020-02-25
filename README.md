@@ -1,5 +1,6 @@
 # ExodusSoundBoard
-Sound board for the exodus wow community
+Sound board for <a href='https://worldofwarcraft.com/en-gb/guild/eu/twilights-hammer/the-exodus'>The Exodus World of Warcraft community</a>
 Keywords which trigger audio files - what fun.
 
-Type "/esb" in-gamefor commands!
+Type "/esb" in-game!
+
