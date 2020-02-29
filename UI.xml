@@ -262,7 +262,7 @@
 				<OnClick>SendAllAddonMessages(soundTable[21][1])</OnClick>
 			</Scripts>
         </Button>
-		<Button inherits="UIPanelButtonTemplate">
+		<!-- <Button inherits="UIPanelButtonTemplate">
 			<NormalTexture file="INTERFACE/ICONS/ability_warrior_commandingshout"/>
 			<HighlightTexture file="INTERFACE/ICONS/ability_warrior_commandingshout" alphaMode="ADD"/>
 			<PushedTexture file="INTERFACE/ICONS/ability_warrior_commandingshout" alphaMode="MOD"/>
@@ -271,17 +271,17 @@
 			<Scripts>
 				<OnClick>SendAllAddonMessages(soundTable[22][1])</OnClick>
 			</Scripts>
-        </Button>
-		<Button inherits="UIPanelButtonTemplate">
+        </Button> -->
+		<!-- <Button inherits="UIPanelButtonTemplate">
 			<NormalTexture file="INTERFACE/ICONS/thumbsup"/>
 			<HighlightTexture file="INTERFACE/ICONS/thumbsup" alphaMode="ADD"/>
 			<PushedTexture file="INTERFACE/ICONS/thumbsup" alphaMode="MOD"/>
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="106" y="-222"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[23][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[22][1])</OnClick>
 			</Scripts>
-        </Button>
+        </Button> -->
 		<Button inherits="UIPanelButtonTemplate">
 			<NormalTexture file="INTERFACE/ICONS/ability_paladin_handoflight"/>
 			<HighlightTexture file="INTERFACE/ICONS/ability_paladin_handoflight" alphaMode="ADD"/>
@@ -289,7 +289,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="154" y="-222"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[24][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[22][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -299,7 +299,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="202" y="-222"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[25][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[23][1])</OnClick>
 			</Scripts>
         </Button>
 
@@ -311,7 +311,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="10" y="-270"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[26][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[24][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -321,7 +321,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="58" y="-270"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[27][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[25][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -331,7 +331,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="106" y="-270"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[28][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[26][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -341,7 +341,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="154" y="-270"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[29][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[27][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -351,7 +351,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="202" y="-270"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[30][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[28][1])</OnClick>
 			</Scripts>
         </Button>
 
@@ -363,7 +363,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="10" y="-318"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[31][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[29][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -373,7 +373,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="58" y="-318"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[32][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[30][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -383,7 +383,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="106" y="-318"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[33][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[31][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -393,7 +393,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="154" y="-318"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[34][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[32][1])</OnClick>
 			</Scripts>
         </Button>
 		<Button inherits="UIPanelButtonTemplate">
@@ -403,7 +403,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="202" y="-318"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[35][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[33][1])</OnClick>
 			</Scripts>
         </Button>
 		
@@ -415,7 +415,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="10" y="-366"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[36][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[34][1])</OnClick>
 			</Scripts>
         </Button>
         		<Button inherits="UIPanelButtonTemplate">
@@ -425,7 +425,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="58" y="-366"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[37][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[35][1])</OnClick>
 			</Scripts>
         </Button>
         		<Button inherits="UIPanelButtonTemplate">
@@ -435,7 +435,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="106" y="-366"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[38][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[36][1])</OnClick>
 			</Scripts>
         </Button>
         <Button inherits="UIPanelButtonTemplate">
@@ -445,7 +445,7 @@
 			<Size x="48" y="48"/>
 			<Anchors><Anchor point="TOPLEFT" x="154" y="-366"/></Anchors>
 			<Scripts>
-				<OnClick>SendAllAddonMessages(soundTable[39][1])</OnClick>
+				<OnClick>SendAllAddonMessages(soundTable[37][1])</OnClick>
 			</Scripts>
         </Button>
 		<!-- <Button inherits="UIPanelButtonTemplate">
