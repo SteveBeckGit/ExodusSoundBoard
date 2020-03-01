@@ -42,6 +42,8 @@ soundTable = {
   {"Welcome","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Welcome.ogg","INTERFACE/ICONS/INV_Misc_Toy_07"},
   {"Receive","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Receive.ogg","INTERFACE/ICONS/INV_Pet_DiseasedBearCub"},
   {"WTF","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/INV_Misc_Head_Centaur_01"},
+  {"StanSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
+  {"ArranSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
 }
 addonPrefix = "ESB1337"
 
