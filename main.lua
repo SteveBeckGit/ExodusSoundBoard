@@ -24,8 +24,8 @@ soundTable = {
   {"Popcorn","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\popcorn.ogg","INTERFACE/ICONS/inv_misc_popcorntoy"},
   {"Sorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sorry.ogg","INTERFACE/ICONS/spell_misc_emotionafraid"},
   {"What","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\What.ogg","INTERFACE/ICONS/ability_rogue_surpriseattack"},
-  {"Bastard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bastard.ogg","INTERFACE/ICONS/ability_warrior_commandingshout"},
-  {"GoodJob","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\GoodJob.ogg","INTERFACE/ICONS/thumbsup"},
+  -- {"Bastard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bastard.ogg","INTERFACE/ICONS/ability_warrior_commandingshout"},
+  -- {"GoodJob","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\GoodJob.ogg","INTERFACE/ICONS/thumbsup"},
   {"HiThere","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\HiThere.ogg","INTERFACE/ICONS/ability_paladin_handoflight"},
   {"Zuma","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Zuma.ogg","INTERFACE/ICONS/inv_helm_laughingskull_01"},
   {"FancyMeeting","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FancyMeetingYouHere.ogg","INTERFACE/ICONS/inv_garrison_hearthstone"},
@@ -42,6 +42,8 @@ soundTable = {
   {"Welcome","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Welcome.ogg","INTERFACE/ICONS/INV_Misc_Toy_07"},
   {"Receive","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Receive.ogg","INTERFACE/ICONS/INV_Pet_DiseasedBearCub"},
   {"WTF","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/INV_Misc_Head_Centaur_01"},
+  {"StanSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
+  {"ArranSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
 }
 addonPrefix = "ESB1337"
 
@@ -82,7 +84,7 @@ function printWelcomeMessage()
   print("<ESB> Champion!")
   print("<ESB> Popcorn")
   print("<ESB> Sorry")
-  print("<ESB> GoodJob")
+  -- print("<ESB> GoodJob")
   print("<ESB> HiThere")
   print("<ESB> Zuma")
   print("<ESB> FancyMeeting")
@@ -102,7 +104,7 @@ function printWelcomeMessage()
 end
 
 function SendAllAddonMessages(command)
-  if (UnitExists("target")) then C_ChatInfo.SendAddonMessage(addonPrefix, command, "WHISPER", GetUnitName("target", 1)) end;
+  if (UnitExists("target") and (UnitIsPlayer("target"))) then C_ChatInfo.SendAddonMessage(addonPrefix, command, "WHISPER", GetUnitName("target", 1)) end;
   if (IsInRaid()) then
     C_ChatInfo.SendAddonMessage(addonPrefix, command, "RAID")
   elseif (IsInGroup()) then

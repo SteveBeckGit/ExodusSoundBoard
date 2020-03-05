@@ -15,10 +15,27 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
 
 end);
 
-function playSoundIfExists(msg) 
-    -- iterate over all sounds in order, check for match and return if one is found
+function randomizeSound(msg)
+    local keys = {}
+
+    for i, sound in ipairs(soundTable) do --search table for anything with the msg word in it and add table item to local array
+        if string.find(sound[1], msg) then
+            table.insert( keys, sound )
+        end
+        print(keys[1])
+        PlaySoundFile(math.random(#keys)[2], "Master") --pick random sound in local array and play its sound
+        return
+      end
+    end
+
+
+function playSoundIfExists(msg)
+    if (msg=="Sorry" ) then  --sound[1] is the command name     || sound[1]=="HowManyWeeks" || sound[1]=="Ree2"
+        randomizeSound(msg)
+    end
+            -- iterate over all sounds in order, check for match and return if one is found
     for i, sound in ipairs(soundTable) do
-        if (string.find(msg, sound[1])) then --sound[1] is the command name
+        if (string.find(msg, sound[1])) then 
             PlaySoundFile(sound[2], "Master") --sound[2] is the filepath to the sound clip
             return
         end
