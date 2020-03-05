@@ -15,24 +15,24 @@ frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives ev
 
 end);
 
-function randomizeSound(msg)
-    local keys = {}
+-- function randomizeSound(msg)
+--     local keys = {}
 
-    for i, sound in ipairs(soundTable) do --search table for anything with the msg word in it and add table item to local array
-        if string.find(sound[1], msg) then
-            table.insert( keys, sound )
-        end
-        print(keys[1])
-        PlaySoundFile(math.random(#keys)[2], "Master") --pick random sound in local array and play its sound
-        return
-      end
-    end
+--     for i, sound in ipairs(soundTable) do --search table for anything with the msg word in it and add table item to local array
+--         if string.find(sound[1], msg) then
+--             table.insert( keys, sound )
+--         end
+--         print(keys[1])
+--         PlaySoundFile(math.random(#keys)[2], "Master") --pick random sound in local array and play its sound
+--         return
+--       end
+--     end
 
 
 function playSoundIfExists(msg)
-    if (msg=="Sorry" ) then  --sound[1] is the command name     || sound[1]=="HowManyWeeks" || sound[1]=="Ree2"
-        randomizeSound(msg)
-    end
+    -- if (msg=="Sorry" ) then  --sound[1] is the command name     || sound[1]=="HowManyWeeks" || sound[1]=="Ree2"
+    --     randomizeSound(msg)
+    -- end
             -- iterate over all sounds in order, check for match and return if one is found
     for i, sound in ipairs(soundTable) do
         if (string.find(msg, sound[1])) then 
