@@ -9,7 +9,7 @@ frame:SetScript("OnEvent",function(self,event,prefix,msg,channel,sender)-- OnEve
     if (isUiEvent(event, prefix) and AddonEnabled) then
         updateLeaderboard(sender)
         if (UiEnabled and checkCombat() and isSenderMuted(sender) == false) then
-            playSoundIfExists(msg)
+            PlaySoundFile(msg, "Master") --msg is the sound filepath in this case, as it is being sent from the UI
         end
     end
 end);
@@ -40,5 +40,8 @@ function toggleSenderMute(sender)
 end
 
 function isSenderMuted(sender)
+    if (LEADERBOARD_TABLE[sender] == nil) then
+        return false
+    end
     return LEADERBOARD_TABLE[sender][2]
 end
