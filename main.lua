@@ -128,7 +128,7 @@ function setupMainUI()
     button:SetNormalTexture(SOUND_TABLE[i][3])
     button:SetScript("OnClick", 
       function()
-        SendAllAddonMessages(SOUND_TABLE[i][1])
+        SendAllAddonMessages(SOUND_TABLE[i][2])
       end
     )
   end
@@ -262,15 +262,15 @@ function printWelcomeMessage()
   end
 end
 
-function SendAllAddonMessages(command)
+function SendAllAddonMessages(soundFilepath)
   if (AddonEnabled and UiEnabled) then --only allow users to use the UI if their settings are enabled
-    if (UnitExists("target") and (UnitIsPlayer("target"))) then C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "WHISPER", GetUnitName("target", 1)) end;
+    if (UnitExists("target") and (UnitIsPlayer("target"))) then C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "WHISPER", GetUnitName("target", 1)) end;
     if (IsInRaid()) then
-      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "RAID")
+      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "RAID")
     elseif (IsInGroup()) then
-      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "PARTY")
+      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "PARTY")
     else
-      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "WHISPER", GetUnitName("player", 1))
+      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "WHISPER", GetUnitName("player", 1))
     end
   end
 end
