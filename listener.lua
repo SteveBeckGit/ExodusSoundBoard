@@ -9,9 +9,8 @@ frame:RegisterEvent("CHAT_MSG_BN_WHISPER");
 frame:RegisterEvent("CHAT_MSG_PARTY");-- Register our event
 frame:SetScript("OnEvent",function(self,event,msg,sender)-- OnEvent handler receives event triggers
     if (isChatEvent(event) and AddonEnabled) then
-        updateLeaderboard(sender)
         if (ChatEnabled and checkCombat() and isSenderMuted(sender) == false) then
-            playSoundIfExists(msg)
+            playSoundIfExists(msg, sender)
         end
     end
 end);
@@ -30,13 +29,14 @@ end);
 --     end
 
 
-function playSoundIfExists(msg)
+function playSoundIfExists(msg, sender)
     -- if (msg=="Sorry" ) then  --sound[1] is the command name     || sound[1]=="HowManyWeeks" || sound[1]=="Ree2"
     --     randomizeSound(msg)
     -- end
             -- iterate over all sounds in order, check for match and return if one is found
     for i, sound in ipairs(SOUND_TABLE) do
         if (string.find(msg, sound[1])) then 
+            updateLeaderboard(sender)
             PlaySoundFile(sound[2], "Master") --sound[2] is the filepath to the sound clip
             return
         end
