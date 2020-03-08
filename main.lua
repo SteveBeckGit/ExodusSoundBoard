@@ -40,7 +40,8 @@ SOUND_TABLE = {
   {"WarrenGasm","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WarrenGasm.ogg","INTERFACE/ICONS/ability_warrior_rampage"},
   {"TooSoon","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\TooSoon.ogg","INTERFACE/ICONS/spell_holy_borrowedtime"},
   {"ScrewYou","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ScrewAllOfYou.ogg","INTERFACE/ICONS/inv_misc_screwdriver_01"},
-  {"ManUp","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ManUp2.ogg","INTERFACE/ICONS/Achievement_Dungeon_Bastion of Twilight_Chogall Boss"},
+  {"ManUp","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ManUp.ogg","INTERFACE/ICONS/Achievement_Dungeon_Bastion of Twilight_Chogall Boss"},
+  -- {"ManUp2","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ManUp2.ogg","INTERFACE/ICONS/Achievement_Dungeon_Bastion of Twilight_Chogall Boss"},
   {"Kos","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Kos.ogg","INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood"},
   {"ArranYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ArranYeah.ogg","INTERFACE/ICONS/Spell_Holy_FistOfJustice"},
   {"OhYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OhYeah.ogg","INTERFACE/ICONS/INV_Relics_TotemofRage"},
@@ -48,7 +49,6 @@ SOUND_TABLE = {
   {"NoNiceThings","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NoNiceThings.ogg","INTERFACE/ICONS/INV_Misc_Statue_05"},
   {"NoOneImportantDied","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NoOneImportantDied.ogg","INTERFACE/ICONS/Achievement_WorldEvent_Brewmaster"},
   {"Typing","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Typing.ogg","INTERFACE/ICONS/Achievement_Leader_King_Varian_Wrynn"},
-  {"Suck","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\YouDidntSuck.ogg","INTERFACE/ICONS/Ability_Racial_Avatar"},
   {"RightInTheKilt","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RightInTheKilt.ogg","INTERFACE/ICONS/INV_Kilt_Cloth_01"},
   {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"}
 }
