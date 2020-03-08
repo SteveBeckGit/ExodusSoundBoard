@@ -9,7 +9,7 @@ frame:RegisterEvent("CHAT_MSG_BN_WHISPER");
 frame:RegisterEvent("CHAT_MSG_PARTY");-- Register our event
 frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives event triggers
 
-    if (isChatEvent(event)) then
+    if (AddonEnabled and ChatEnabled and checkCombat() and isChatEvent(event)) then
         playSoundIfExists(msg)
     end
 
@@ -18,7 +18,7 @@ end);
 -- function randomizeSound(msg)
 --     local keys = {}
 
---     for i, sound in ipairs(soundTable) do --search table for anything with the msg word in it and add table item to local array
+--     for i, sound in ipairs(SOUND_TABLE) do --search table for anything with the msg word in it and add table item to local array
 --         if string.find(sound[1], msg) then
 --             table.insert( keys, sound )
 --         end
@@ -34,7 +34,7 @@ function playSoundIfExists(msg)
     --     randomizeSound(msg)
     -- end
             -- iterate over all sounds in order, check for match and return if one is found
-    for i, sound in ipairs(soundTable) do
+    for i, sound in ipairs(SOUND_TABLE) do
         if (string.find(msg, sound[1])) then 
             PlaySoundFile(sound[2], "Master") --sound[2] is the filepath to the sound clip
             return
@@ -56,6 +56,15 @@ function isChatEvent(event)
     else 
         return false
     end    
+end
+
+function checkCombat()
+    inCombat = UnitAffectingCombat("player")
+
+    if (inCombat and CombatEnabled == false) then
+        return false
+    end
+    return true
 end
 
 

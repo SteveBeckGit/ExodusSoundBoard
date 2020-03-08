@@ -2,7 +2,7 @@
 --intended to be referenced throughout the addon, our central source of info
 --lua does not preserve order of elements in table 
 --we use a numeric key and ipairs to iterate over the elements in the desired order
-soundTable = {
+SOUND_TABLE = {
   {"Wed Wench","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\1_red_wrench.ogg","INTERFACE/ICONS/spell_mekkatorque_bot_redwrench"}, --same as [1] = {"command_name", "sound_filepath", "icon"}, 
   {"KappaWarren","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\2_warrenKappa.ogg","INTERFACE/ICONS/achievement_nazmir_boss_ghuun"}, --[2] = {}...
   {"NotTheBelt","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NotTheBelt.ogg","INTERFACE/ICONS/inv_belt_04"},
@@ -45,75 +45,177 @@ soundTable = {
   -- {"StanSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
   -- {"ArranSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
 }
-addonPrefix = "ESB1337"
+ADDON_PREFIX = "ESB1337"
+ADDON_NAME = "ExodusSoundBoard"
 
 -- variables used for generating UI
 -- changing these is an easy way to update the UI - no other changes needed
-local btnSize = 48
-local btnsPerRow = 5
-local outerHorizontalSpacing = 10
+local BTN_SIZE = 48
+local BTNS_PER_ROW = 5
+local OUTER_HORIZONTAL_SPACING = 10
+
+local frame = CreateFrame("FRAME"); -- Need a frame to respond to events
+frame:RegisterEvent("ADDON_LOADED"); -- Fired when saved variables are loaded
+
+function frame:OnEvent(event, arg1)
+  if (event == "ADDON_LOADED" and arg1 == ADDON_NAME) then
+    if (AddonEnabled == nil) then --check if our persisted values (saved variables) have been initialised yet
+      AddonEnabled = true --if not, give a default value
+    end
+    if (ChatEnabled == nil) then
+      ChatEnabled = true
+    end
+    if (UiEnabled == nil) then
+      UiEnabled = true
+    end
+    if (CombatEnabled == nil) then
+      CombatEnabled = true
+    end
+  end
+end
+
+frame:SetScript("OnEvent", frame.OnEvent)
 
 -- setting up slash commands and show/hide functionality
 SLASH_ESB1 = "/ESB"
 SlashCmdList["ESB"] = function(msg)
   printWelcomeMessage()
-  if (PutItInFrame:IsShown()) then
-    PutItInFrame:Hide()
+  if (MainFrame:IsShown()) then
+    MainFrame:Hide()
+    OptionsFrame:Hide()
   else
-    PutItInFrame:Show()
-    setupUI()
+    MainFrame:Show()
+    setupMainUI()
   end
 end
 
-function setupUI()
+function setupMainUI()
   --set up the frame for the buttons based on number of rows
-  local numSounds = #soundTable
+  local numSounds = #SOUND_TABLE
   local numRows = 0
-  if (numSounds % btnsPerRow == 0) then
-    numRows = numSounds / btnsPerRow
+  if (numSounds % BTNS_PER_ROW == 0) then
+    numRows = numSounds / BTNS_PER_ROW
   else
-    numRows = math.floor(numSounds / btnsPerRow) + 1
+    numRows = math.floor(numSounds / BTNS_PER_ROW) + 1
   end
-  PutItInFrame:SetSize(btnsPerRow * btnSize + outerHorizontalSpacing * 2, numRows * btnSize + 47)
+  MainFrame:SetSize(BTNS_PER_ROW * BTN_SIZE + OUTER_HORIZONTAL_SPACING * 2, numRows * BTN_SIZE + 77)
 
   --add a button for each item in the sound table
-  for i, sound in ipairs(soundTable) do
-    local button = CreateFrame("Button", "Button" .. i, PutItInFrame, "UIPanelButtonTemplate")
+  for i, sound in ipairs(SOUND_TABLE) do
+    local button = CreateFrame("Button", "Button" .. i, MainFrame, "UIPanelButtonTemplate")
     local row = 0
-    if (i % btnsPerRow == 0) then
-       row = math.floor((i - 1) / (btnsPerRow))
+    if (i % BTNS_PER_ROW == 0) then
+       row = math.floor((i - 1) / (BTNS_PER_ROW))
     else 
-       row = math.floor(i / (btnsPerRow))
+       row = math.floor(i / (BTNS_PER_ROW))
     end   
-    local col = (i - 1) - (row * btnsPerRow)
-    button:SetPoint("TOPLEFT", outerHorizontalSpacing + col * btnSize, -30 - (row * btnSize))
-    button:SetSize(btnSize, btnSize)
-    button:SetNormalTexture(soundTable[i][3])
+    local col = (i - 1) - (row * BTNS_PER_ROW)
+    button:SetPoint("TOPLEFT", OUTER_HORIZONTAL_SPACING + col * BTN_SIZE, -60 - (row * BTN_SIZE))
+    button:SetSize(BTN_SIZE, BTN_SIZE)
+    button:SetNormalTexture(SOUND_TABLE[i][3])
     button:SetScript("OnClick", 
       function()
-        SendAllAddonMessages(soundTable[i][1])
+        SendAllAddonMessages(SOUND_TABLE[i][1])
       end
     )
   end
  
 end
 
+function setupOptionsUI()
+  if (OptionsFrame:IsShown()) then
+    OptionsFrame:Hide()
+  else
+    OptionsFrame:Show()
+  end
+  local addonEnabledCheckButton = createCheckButton("AddonEnabledCheckButton", OptionsFrame, 10, -30, "Enabled", "Enable/disable the soundboard", AddonEnabled)
+  addonEnabledCheckButton:SetScript("OnClick", 
+    function()
+      if (AddonEnabled) then
+        AddonEnabled = false
+        setSubOptionsVisibility()
+      else
+        AddonEnabled = true
+        setSubOptionsVisibility()
+      end
+    end
+  );
+
+  local chatEnabledCheckButton = createCheckButton("ChatEnabledCheckButton", OptionsFrame, 10, -50, "Chat commands enabled", "Enable/disable chat commands triggering sounds", ChatEnabled)
+    chatEnabledCheckButton:SetScript("OnClick", 
+      function()
+        if (ChatEnabled) then
+          ChatEnabled = false
+        else
+          ChatEnabled = true
+        end
+      end
+    );
+
+    local uiEnabledCheckButton = createCheckButton("UiEnabledCheckButton", OptionsFrame, 10, -70, "UI enabled", "Enable/disable the soundboard UI triggering sounds", UiEnabled)
+    uiEnabledCheckButton:SetScript("OnClick", 
+      function()
+        if (UiEnabled) then
+          UiEnabled = false
+        else
+          UiEnabled = true
+        end
+      end
+    );
+
+    local combatEnabledCheckButton = createCheckButton("CombatEnabledCheckButton", OptionsFrame, 10, -90, "Enabled in combat", "Enable/disable sounds triggering whilst you are in combat", CombatEnabled)
+    combatEnabledCheckButton:SetScript("OnClick", 
+      function()
+        if (CombatEnabled) then
+          CombatEnabled = false
+        else
+          CombatEnabled = true
+        end
+      end
+    );
+
+  setSubOptionsVisibility()
+end
+
+function setSubOptionsVisibility() 
+    if (AddonEnabled == false) then
+      ChatEnabledCheckButton:Hide()
+      UiEnabledCheckButton:Hide()
+      CombatEnabledCheckButton:Hide()
+    else
+      ChatEnabledCheckButton:Show()
+      UiEnabledCheckButton:Show()
+      CombatEnabledCheckButton:Show()
+    end
+end
+
+function createCheckButton(globalName, parent, x_loc, y_loc, displayName, mouseoverText, checkedState) 
+  local checkButton = CreateFrame("CheckButton", globalName, parent, "ChatConfigCheckButtonTemplate");
+  checkButton:SetPoint("TOPLEFT", x_loc, y_loc);
+  getglobal(checkButton:GetName() .. 'Text'):SetText(displayName);
+  checkButton.tooltip = mouseoverText;
+  checkButton:SetChecked(checkedState)
+  return checkButton
+end
+
 function printWelcomeMessage()
   print("<ESB> Welcome to Exodus Sound Board")
   print("<ESB> Each command is case sensitive, but can be included in a phrase")
   print("<ESB> The following commands are included in this release:")
-  for i, sound in ipairs(soundTable) do
+  for i, sound in ipairs(SOUND_TABLE) do
     print("<ESB> " .. sound[1])
   end
 end
 
 function SendAllAddonMessages(command)
-  if (UnitExists("target") and (UnitIsPlayer("target"))) then C_ChatInfo.SendAddonMessage(addonPrefix, command, "WHISPER", GetUnitName("target", 1)) end;
-  if (IsInRaid()) then
-    C_ChatInfo.SendAddonMessage(addonPrefix, command, "RAID")
-  elseif (IsInGroup()) then
-    C_ChatInfo.SendAddonMessage(addonPrefix, command, "PARTY")
-  else
-    C_ChatInfo.SendAddonMessage(addonPrefix, command, "WHISPER", GetUnitName("player", 1))
+  if (AddonEnabled and UiEnabled) then --only allow users to use the UI if their settings are enabled
+    if (UnitExists("target") and (UnitIsPlayer("target"))) then C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "WHISPER", GetUnitName("target", 1)) end;
+    if (IsInRaid()) then
+      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "RAID")
+    elseif (IsInGroup()) then
+      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "PARTY")
+    else
+      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, command, "WHISPER", GetUnitName("player", 1))
+    end
   end
 end
