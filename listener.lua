@@ -7,12 +7,13 @@ frame:RegisterEvent("CHAT_MSG_SAY");
 frame:RegisterEvent("CHAT_MSG_WHISPER");
 frame:RegisterEvent("CHAT_MSG_BN_WHISPER");
 frame:RegisterEvent("CHAT_MSG_PARTY");-- Register our event
-frame:SetScript("OnEvent",function(self,event,msg)-- OnEvent handler receives event triggers
-
-    if (AddonEnabled and ChatEnabled and checkCombat() and isChatEvent(event)) then
-        playSoundIfExists(msg)
+frame:SetScript("OnEvent",function(self,event,msg,sender)-- OnEvent handler receives event triggers
+    if (isChatEvent(event) and AddonEnabled) then
+        updateLeaderboard(sender)
+        if (ChatEnabled and checkCombat() and isSenderMuted(sender) == false) then
+            playSoundIfExists(msg)
+        end
     end
-
 end);
 
 -- function randomizeSound(msg)
@@ -59,7 +60,7 @@ function isChatEvent(event)
 end
 
 function checkCombat()
-    inCombat = UnitAffectingCombat("player")
+    local inCombat = UnitAffectingCombat("player")
 
     if (inCombat and CombatEnabled == false) then
         return false

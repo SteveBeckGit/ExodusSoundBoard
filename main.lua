@@ -53,6 +53,7 @@ ADDON_NAME = "ExodusSoundBoard"
 local BTN_SIZE = 48
 local BTNS_PER_ROW = 5
 local OUTER_HORIZONTAL_SPACING = 10
+local mainUiCreated = false
 
 local frame = CreateFrame("FRAME"); -- Need a frame to respond to events
 frame:RegisterEvent("ADDON_LOADED"); -- Fired when saved variables are loaded
@@ -83,6 +84,7 @@ SlashCmdList["ESB"] = function(msg)
   if (MainFrame:IsShown()) then
     MainFrame:Hide()
     OptionsFrame:Hide()
+    LeaderboardFrame:Hide()
   else
     MainFrame:Show()
     setupMainUI()
@@ -90,6 +92,9 @@ SlashCmdList["ESB"] = function(msg)
 end
 
 function setupMainUI()
+  if (mainUiCreated) then
+    return
+  end
   --set up the frame for the buttons based on number of rows
   local numSounds = #SOUND_TABLE
   local numRows = 0
@@ -119,6 +124,7 @@ function setupMainUI()
       end
     )
   end
+  mainUiCreated = true
  
 end
 
@@ -128,31 +134,37 @@ function setupOptionsUI()
   else
     OptionsFrame:Show()
   end
-  local addonEnabledCheckButton = createCheckButton("AddonEnabledCheckButton", OptionsFrame, 10, -30, "Enabled", "Enable/disable the soundboard", AddonEnabled)
-  addonEnabledCheckButton:SetScript("OnClick", 
-    function()
-      if (AddonEnabled) then
-        AddonEnabled = false
-        setSubOptionsVisibility()
-      else
-        AddonEnabled = true
-        setSubOptionsVisibility()
-      end
-    end
-  );
 
-  local chatEnabledCheckButton = createCheckButton("ChatEnabledCheckButton", OptionsFrame, 10, -50, "Chat commands enabled", "Enable/disable chat commands triggering sounds", ChatEnabled)
-    chatEnabledCheckButton:SetScript("OnClick", 
+  if (AddonEnabledCheckButton == nil) then
+    local addonEnabledCheckButton = createCheckButton("AddonEnabledCheckButton", OptionsFrame, OUTER_HORIZONTAL_SPACING, -30, "Enabled", "Enable/disable the soundboard", AddonEnabled)
+    addonEnabledCheckButton:SetScript("OnClick", 
       function()
-        if (ChatEnabled) then
-          ChatEnabled = false
+        if (AddonEnabled) then
+          AddonEnabled = false
+          setSubOptionsVisibility()
         else
-          ChatEnabled = true
+          AddonEnabled = true
+          setSubOptionsVisibility()
         end
       end
     );
+  end
 
-    local uiEnabledCheckButton = createCheckButton("UiEnabledCheckButton", OptionsFrame, 10, -70, "UI enabled", "Enable/disable the soundboard UI triggering sounds", UiEnabled)
+  if (ChatEnabledCheckButton == nil) then
+    local chatEnabledCheckButton = createCheckButton("ChatEnabledCheckButton", OptionsFrame, OUTER_HORIZONTAL_SPACING, -50, "Chat commands enabled", "Enable/disable chat commands triggering sounds", ChatEnabled)
+      chatEnabledCheckButton:SetScript("OnClick", 
+        function()
+          if (ChatEnabled) then
+            ChatEnabled = false
+          else
+            ChatEnabled = true
+          end
+        end
+      );
+  end
+
+  if (UiEnabledCheckButton == nil) then
+    local uiEnabledCheckButton = createCheckButton("UiEnabledCheckButton", OptionsFrame, OUTER_HORIZONTAL_SPACING, -70, "UI enabled", "Enable/disable the soundboard UI triggering sounds", UiEnabled)
     uiEnabledCheckButton:SetScript("OnClick", 
       function()
         if (UiEnabled) then
@@ -162,8 +174,10 @@ function setupOptionsUI()
         end
       end
     );
+  end
 
-    local combatEnabledCheckButton = createCheckButton("CombatEnabledCheckButton", OptionsFrame, 10, -90, "Enabled in combat", "Enable/disable sounds triggering whilst you are in combat", CombatEnabled)
+  if (CombatEnabledCheckButton == nil) then
+    local combatEnabledCheckButton = createCheckButton("CombatEnabledCheckButton", OptionsFrame, OUTER_HORIZONTAL_SPACING, -90, "Enabled in combat", "Enable/disable sounds triggering whilst you are in combat", CombatEnabled)
     combatEnabledCheckButton:SetScript("OnClick", 
       function()
         if (CombatEnabled) then
@@ -173,6 +187,7 @@ function setupOptionsUI()
         end
       end
     );
+  end
 
   setSubOptionsVisibility()
 end
@@ -187,6 +202,29 @@ function setSubOptionsVisibility()
       UiEnabledCheckButton:Show()
       CombatEnabledCheckButton:Show()
     end
+end
+
+function setupLeaderboardUI()
+  if (LeaderboardFrame:IsShown()) then
+    LeaderboardFrame:Hide()
+  else
+    LeaderboardFrame:Show()
+  end
+  updateLeaderboardUI()
+end
+
+function updateLeaderboardUI()
+  local y_offset = -10
+  LeaderboardFrame:SetSize(400, LEADERBOARD_TABLE_SIZE * 18 + 77)
+  for player, details in pairs(LEADERBOARD_TABLE) do
+    y_offset = y_offset - 20
+    local checkButton = createCheckButton(player, LeaderboardFrame, OUTER_HORIZONTAL_SPACING, y_offset, player .. " has spammed " .. details[1] .. " times", "Mute " .. player .. " for this session?", false)
+    checkButton:SetScript("OnClick", 
+      function()
+        toggleSenderMute(player)
+      end
+    );
+  end
 end
 
 function createCheckButton(globalName, parent, x_loc, y_loc, displayName, mouseoverText, checkedState) 
