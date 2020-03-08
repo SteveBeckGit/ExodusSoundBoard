@@ -41,11 +41,17 @@ soundTable = {
   {"KiltPriide","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\KiltPride2.ogg","INTERFACE/ICONS/Spell_Shaman_GiftEarthmother"},
   {"Welcome","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Welcome.ogg","INTERFACE/ICONS/INV_Misc_Toy_07"},
   {"Receive","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Receive.ogg","INTERFACE/ICONS/INV_Pet_DiseasedBearCub"},
-  {"WTF","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/INV_Misc_Head_Centaur_01"},
-  {"StanSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
-  {"ArranSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
+  {"WTF","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/INV_Misc_Head_Centaur_01"}
+  -- {"StanSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
+  -- {"ArranSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WhatDaFuck.ogg","INTERFACE/ICONS/TODO"},
 }
 addonPrefix = "ESB1337"
+
+-- variables used for generating UI
+-- changing these is an easy way to update the UI - no other changes needed
+local btnSize = 48
+local btnsPerRow = 5
+local outerHorizontalSpacing = 10
 
 -- setting up slash commands and show/hide functionality
 SLASH_ESB1 = "/ESB"
@@ -55,52 +61,50 @@ SlashCmdList["ESB"] = function(msg)
     PutItInFrame:Hide()
   else
     PutItInFrame:Show()
+    setupUI()
   end
 end
-  
+
+function setupUI()
+  --set up the frame for the buttons based on number of rows
+  local numSounds = #soundTable
+  local numRows = 0
+  if (numSounds % btnsPerRow == 0) then
+    numRows = numSounds / btnsPerRow
+  else
+    numRows = math.floor(numSounds / btnsPerRow) + 1
+  end
+  PutItInFrame:SetSize(btnsPerRow * btnSize + outerHorizontalSpacing * 2, numRows * btnSize + 47)
+
+  --add a button for each item in the sound table
+  for i, sound in ipairs(soundTable) do
+    local button = CreateFrame("Button", "Button" .. i, PutItInFrame, "UIPanelButtonTemplate")
+    local row = 0
+    if (i % btnsPerRow == 0) then
+       row = math.floor((i - 1) / (btnsPerRow))
+    else 
+       row = math.floor(i / (btnsPerRow))
+    end   
+    local col = (i - 1) - (row * btnsPerRow)
+    button:SetPoint("TOPLEFT", outerHorizontalSpacing + col * btnSize, -30 - (row * btnSize))
+    button:SetSize(btnSize, btnSize)
+    button:SetNormalTexture(soundTable[i][3])
+    button:SetScript("OnClick", 
+      function()
+        SendAllAddonMessages(soundTable[i][1])
+      end
+    )
+  end
+ 
+end
 
 function printWelcomeMessage()
   print("<ESB> Welcome to Exodus Sound Board")
   print("<ESB> Each command is case sensitive, but can be included in a phrase")
   print("<ESB> The following commands are included in this release:")
-  print("<ESB> Wed Wench")
-  print("<ESB> KappaWarren")
-  print("<ESB> KiltPride")
-  print("<ESB> KiltPriide")
-  print("<ESB> Blue")
-  print("<ESB> HowManyWeeks")
-  print("<ESB> NotTheBelt")
-  print("<ESB> Bruce")
-  print("<ESB> Mana")
-  print("<ESB> STFU")
-  print("<ESB> Oww")
-  print("<ESB> Oooh")
-  print("<ESB> Slipped")
-  print("<ESB> Blowout")
-  print("<ESB> Ree")
-  print("<ESB> ArranRee")
-  print("<ESB> ArranYeah")
-  print("<ESB> Bloodlust")
-  print("<ESB> Champion!")
-  print("<ESB> Popcorn")
-  print("<ESB> Sorry")
-  -- print("<ESB> GoodJob")
-  print("<ESB> HiThere")
-  print("<ESB> Zuma")
-  print("<ESB> FancyMeeting")
-  print("<ESB> Hard")
-  print("<ESB> FirstTime")
-  print("<ESB> WarrenGasm")
-  print("<ESB> OnceItsIn")
-  print("<ESB> TooSoon")
-  print("<ESB> ScrewYou")
-  print("<ESB> OhYeah")
-  print("<ESB> Kos")
-  print("<ESB> OhYeah")
-  print("<ESB> Receive")
-  print("<ESB> Welcome")
-  print("<ESB> WTF")
-
+  for i, sound in ipairs(soundTable) do
+    print("<ESB> " .. sound[1])
+  end
 end
 
 function SendAllAddonMessages(command)
