@@ -54,6 +54,7 @@ local BTN_SIZE = 48
 local BTNS_PER_ROW = 5
 local OUTER_HORIZONTAL_SPACING = 10
 local mainUiCreated = false
+local LEADERBOARD_Y_OFFSET = -10
 
 local frame = CreateFrame("FRAME"); -- Need a frame to respond to events
 frame:RegisterEvent("ADDON_LOADED"); -- Fired when saved variables are loaded
@@ -214,16 +215,21 @@ function setupLeaderboardUI()
 end
 
 function updateLeaderboardUI()
-  local y_offset = -10
   LeaderboardFrame:SetSize(400, LEADERBOARD_TABLE_SIZE * 18 + 77)
   for player, details in pairs(LEADERBOARD_TABLE) do
-    y_offset = y_offset - 20
-    local checkButton = createCheckButton(player, LeaderboardFrame, OUTER_HORIZONTAL_SPACING, y_offset, player .. " has spammed " .. details[1] .. " times", "Mute " .. player .. " for this session?", false)
-    checkButton:SetScript("OnClick", 
-      function()
-        toggleSenderMute(player)
-      end
-    );
+    local message = player .. " has spammed " .. details[1] .. " times"
+    local mouseoverText = "Mute " .. player .. " for this session?"
+    if (getglobal(player) ~= nil) then
+      updateCheckButtonText(player, message)
+    else 
+      LEADERBOARD_Y_OFFSET = LEADERBOARD_Y_OFFSET - 20
+      local checkButton = createCheckButton(player, LeaderboardFrame, OUTER_HORIZONTAL_SPACING, LEADERBOARD_Y_OFFSET, message, mouseoverText, false)
+      checkButton:SetScript("OnClick", 
+        function()
+          toggleSenderMute(player)
+        end
+      );
+    end  
   end
 end
 
@@ -234,6 +240,10 @@ function createCheckButton(globalName, parent, x_loc, y_loc, displayName, mouseo
   checkButton.tooltip = mouseoverText;
   checkButton:SetChecked(checkedState)
   return checkButton
+end
+
+function updateCheckButtonText(player, message, mouseoverText)
+  getglobal(player .. 'Text'):SetText(message);
 end
 
 function printWelcomeMessage()
