@@ -10,7 +10,8 @@ eventCapture:SetScript("OnEvent",function(self,event, ...)
     if(checkStatus(event, success)) then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BadGuysWin.ogg","Master")
     elseif(checkStatusTrue(event, success)) then
-        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\pArK.ogg","Master")
+        -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\pArK.ogg","Master")
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\YouDidntSuck.ogg","Master")
     end
 end);
 
