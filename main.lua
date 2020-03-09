@@ -126,6 +126,7 @@ function setupMainUI()
     button:SetPoint("TOPLEFT", OUTER_HORIZONTAL_SPACING + col * BTN_SIZE, -60 - (row * BTN_SIZE))
     button:SetSize(BTN_SIZE, BTN_SIZE)
     button:SetNormalTexture(SOUND_TABLE[i][3])
+    button.tooltipText = SOUND_TABLE[i][1]
     button:SetScript("OnClick", 
       function()
         SendAllAddonMessages(SOUND_TABLE[i][2])
