@@ -2,9 +2,11 @@
 ## Title: Exodus Sound Board
 ## Author: Stan
 ## Version: 0.1
+## SavedVariables: AddonEnabled, ChatEnabled, UiEnabled, CombatEnabled
 
 UI.xml
 listener.lua
 uiListener.lua
 main.lua
 onDeath.lua
+
