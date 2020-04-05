@@ -53,6 +53,8 @@ SOUND_TABLE = {
   {"RightInTheKilt","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RightInTheKilt.ogg","INTERFACE/ICONS/INV_Kilt_Cloth_01"},
   -- {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"},
   {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceSigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"},
+  {"Resurrect","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RezErect.ogg","INTERFACE/ICONS/Spell_Holy_Resurrection"},
+  {"Rage","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Rage.ogg","INTERFACE/ICONS/Warrior_talent_icon_FuryInTheBlood"},
   {"Beningining","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Beningining.ogg","INTERFACE/ICONS/Ability_Hunter_Pet_Gorilla"}
 }
 ADDON_PREFIX = "ESB1337"
@@ -91,7 +93,7 @@ frame:SetScript("OnEvent", frame.OnEvent)
 -- setting up slash commands and show/hide functionality
 SLASH_ESB1 = "/ESB"
 SlashCmdList["ESB"] = function(msg)
-  printWelcomeMessage()
+  -- printWelcomeMessage()
   if (MainFrame:IsShown()) then
     MainFrame:Hide()
     OptionsFrame:Hide()
