@@ -33,15 +33,16 @@ SOUND_TABLE = {
   {"FancyMeeting","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FancyMeetingYouHere.ogg","INTERFACE/ICONS/inv_garrison_hearthstone"},
   {"Hard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Hard.ogg","INTERFACE/ICONS/INV_Pet_Maggot"},
   {"Receive","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Receive.ogg","INTERFACE/ICONS/INV_Pet_DiseasedBearCub"},
-  {"GiveItToMe","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\GiveItToMe.ogg","INTERFACE/ICONS/Garrison_Building_Menagerie"},
+  -- {"GiveItToMe","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\GiveItToMe.ogg","INTERFACE/ICONS/Garrison_Building_Menagerie"},
+  {"GiveItToMe","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceGiveItToMe.ogg","INTERFACE/ICONS/Garrison_Building_Menagerie"},
   {"OnceItsIn","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OnceItsIn.ogg","INTERFACE/ICONS/achievement_nzothraid_nzoth"},
-  {"OmgAmazing","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OmgAmazing.ogg","INTERFACE/ICONS/Ability_Priest_SavingGrace"},
+  -- {"OmgAmazing","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OmgAmazing.ogg","INTERFACE/ICONS/Ability_Priest_SavingGrace"},
+  {"OmgAmazing","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceAmazing.ogg","INTERFACE/ICONS/Ability_Priest_SavingGrace"},
   {"FirstTime","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FirstTime.ogg","INTERFACE/ICONS/achievement_bg_win_av_x_times"},
   {"WarrenGasm","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WarrenGasm.ogg","INTERFACE/ICONS/ability_warrior_rampage"},
   {"TooSoon","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\TooSoon.ogg","INTERFACE/ICONS/spell_holy_borrowedtime"},
   {"ScrewYou","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ScrewAllOfYou.ogg","INTERFACE/ICONS/inv_misc_screwdriver_01"},
   {"ManUp","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ManUp.ogg","INTERFACE/ICONS/Achievement_Dungeon_Bastion of Twilight_Chogall Boss"},
-  -- {"ManUp2","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ManUp2.ogg","INTERFACE/ICONS/Achievement_Dungeon_Bastion of Twilight_Chogall Boss"},
   {"Kos","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Kos.ogg","INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood"},
   {"ArranYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ArranYeah.ogg","INTERFACE/ICONS/Spell_Holy_FistOfJustice"},
   {"OhYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OhYeah.ogg","INTERFACE/ICONS/INV_Relics_TotemofRage"},
@@ -50,7 +51,11 @@ SOUND_TABLE = {
   {"NoOneImportantDied","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NoOneImportantDied.ogg","INTERFACE/ICONS/Achievement_WorldEvent_Brewmaster"},
   {"Typing","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Typing.ogg","INTERFACE/ICONS/Achievement_Leader_King_Varian_Wrynn"},
   {"RightInTheKilt","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RightInTheKilt.ogg","INTERFACE/ICONS/INV_Kilt_Cloth_01"},
-  {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"}
+  -- {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"},
+  {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceSigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"},
+  {"Resurrect","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RezErect.ogg","INTERFACE/ICONS/Spell_Holy_Resurrection"},
+  {"Rage","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Rage.ogg","INTERFACE/ICONS/Warrior_talent_icon_FuryInTheBlood"},
+  {"Beningining","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Beningining.ogg","INTERFACE/ICONS/Ability_Hunter_Pet_Gorilla"}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
@@ -88,7 +93,7 @@ frame:SetScript("OnEvent", frame.OnEvent)
 -- setting up slash commands and show/hide functionality
 SLASH_ESB1 = "/ESB"
 SlashCmdList["ESB"] = function(msg)
-  printWelcomeMessage()
+  -- printWelcomeMessage()
   if (MainFrame:IsShown()) then
     MainFrame:Hide()
     OptionsFrame:Hide()
