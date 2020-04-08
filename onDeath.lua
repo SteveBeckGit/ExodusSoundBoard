@@ -8,8 +8,8 @@ eventCapture:SetScript("OnEvent",function(self,event, ...)
 
     local encounterId, encounterName, difficultyID, groupSize, success = ...;
     if(checkStatus(event, success)) then
-        -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BadGuysWin.ogg","Master")
-        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\HatePeople.ogg","Master")
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BadGuysWin.ogg","Master")
+        -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\HatePeople.ogg","Master")
     elseif(checkStatusTrue(event, success)) then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\pArK.ogg","Master")
         -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\YouDidntSuck.ogg","Master")
