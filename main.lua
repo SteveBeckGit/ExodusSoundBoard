@@ -50,7 +50,8 @@ SOUND_TABLE = {
   {"NoOneImportantDied","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NoOneImportantDied.ogg","INTERFACE/ICONS/Achievement_WorldEvent_Brewmaster"},
   {"Typing","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Typing.ogg","INTERFACE/ICONS/Achievement_Leader_King_Varian_Wrynn"},
   {"RightInTheKilt","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RightInTheKilt.ogg","INTERFACE/ICONS/INV_Kilt_Cloth_01"},
-  {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"}
+  {"Sigh","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sigh.ogg","INTERFACE/ICONS/Ability_Racial_NoseForTrouble"},
+  {"Scars","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\scars.ogg","INTERFACE/ICONS/ability_demonhunter_feldevastation"}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
