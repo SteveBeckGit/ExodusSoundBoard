@@ -116,6 +116,28 @@ function setupMainUI()
   if (mainUiCreated) then
     return
   end
+  --Set backdrops here instead of in XML due to Shadowlands changes. See: https://github.com/Stanzilla/WoWUIBugs/wiki/9.0.1-Consolidated-UI-Changes#backdrop-system-changes
+  MainFrame:SetBackdrop({
+    bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
+    edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",
+    edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 },
+  })
+
+  OptionsFrame:SetBackdrop({
+    bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
+    edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",
+    edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 },
+  })
+
+  LeaderboardFrame:SetBackdrop({
+    bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
+    edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",
+    edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 },
+  })
+
   --set up the frame for the buttons based on number of rows
   local numSounds = #SOUND_TABLE
   local numRows = 0
@@ -124,7 +146,7 @@ function setupMainUI()
   else
     numRows = math.floor(numSounds / BTNS_PER_ROW) + 1
   end
-  MainFrame:SetSize(BTNS_PER_ROW * BTN_SIZE + OUTER_HORIZONTAL_SPACING * 2, numRows * BTN_SIZE + 77)
+  MainFrame:SetSize(BTNS_PER_ROW * BTN_SIZE + OUTER_HORIZONTAL_SPACING * 2, numRows * BTN_SIZE + 72)
 
   --add a button for each item in the sound table
   for i, sound in ipairs(SOUND_TABLE) do
