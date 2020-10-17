@@ -1,6 +1,6 @@
 <Ui>
   <Script file="main.lua"/>
-  <Frame name="MainFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true">
+  <Frame name="MainFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true" inherits="BackdropTemplate">
     <Scripts>
      <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
      <OnDragStart>self:StartMoving();</OnDragStart>
@@ -8,16 +8,7 @@
     </Scripts>
 
     <Anchors><Anchor point="CENTER"/></Anchors>
-
-    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
-  		edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-  		<BackgroundInsets>
-  			<AbsInset left="11" right="12" top="12" bottom="11"/>
-  		</BackgroundInsets>
-  		<TileSize><AbsValue val="32"/></TileSize>
-  		<EdgeSize><AbsValue val="32"/></EdgeSize>
-  	</Backdrop>
-
+    
     <Layers>
       <!-- Window Header -->
   		<Layer level="ARTWORK">
@@ -80,7 +71,7 @@
       </Frames>
   </Frame>
 
-  <Frame name="OptionsFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true">
+  <Frame name="OptionsFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true" inherits="BackdropTemplate">
     <Scripts>
      <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
      <OnDragStart>self:StartMoving();</OnDragStart>
@@ -90,15 +81,6 @@
 	<Size x="260" y="130"/>
 
     <Anchors><Anchor point="CENTER"/></Anchors>
-
-    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
-  		edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-  		<BackgroundInsets>
-  			<AbsInset left="11" right="12" top="12" bottom="11"/>
-  		</BackgroundInsets>
-  		<TileSize><AbsValue val="32"/></TileSize>
-  		<EdgeSize><AbsValue val="32"/></EdgeSize>
-  	</Backdrop>
 
     <Layers>
       <!-- Window Header -->
@@ -138,7 +120,7 @@
       </Frames>
   </Frame>
 
-  <Frame name="LeaderboardFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true">
+  <Frame name="LeaderboardFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true" inherits="BackdropTemplate">
     <Scripts>
      <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
      <OnDragStart>self:StartMoving();</OnDragStart>
@@ -146,15 +128,6 @@
     </Scripts>
 
     <Anchors><Anchor point="CENTER"/></Anchors>
-
-    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
-  		edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-  		<BackgroundInsets>
-  			<AbsInset left="11" right="12" top="12" bottom="11"/>
-  		</BackgroundInsets>
-  		<TileSize><AbsValue val="32"/></TileSize>
-  		<EdgeSize><AbsValue val="32"/></EdgeSize>
-  	</Backdrop>
 
     <Layers>
       <!-- Window Header -->
