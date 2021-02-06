@@ -64,7 +64,9 @@ SOUND_TABLE = {
   {"Aceso","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Aceso.ogg","INTERFACE/ICONS/Spell_Holy_SurgeOfLight"},
   {"UmmWhat","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Umm.ogg","INTERFACE/ICONS/INV_Misc_QuestionMark"},
   {"Scars","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\scars.ogg","INTERFACE/ICONS/ability_demonhunter_feldevastation"},
-  {"Lube","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\lubing.ogg","INTERFACE/ICONS/Achievement_raid_revendrethraid_siredenathrius"}
+  {"break","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\brokeit.ogg","INTERFACE/ICONS/inv_catslime"},
+  {"Gagged","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\gagged.ogg","INTERFACE/ICONS/inv_leather_demonhunter_blindfold_01"},
+  {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/misc_arrowdown"}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
