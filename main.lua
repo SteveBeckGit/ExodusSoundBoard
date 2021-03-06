@@ -42,10 +42,13 @@ SOUND_TABLE = {
   {"BruceAmazing","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceAmazing.ogg","INTERFACE/ICONS/Ability_Priest_SavingGrace"},
   {"FirstTime","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FirstTime.ogg","INTERFACE/ICONS/achievement_bg_win_av_x_times"},
   {"WarrenGasm","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\WarrenGasm.ogg","INTERFACE/ICONS/ability_warrior_rampage"},
+  {"CouncilGasm","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\CouncilGasm.ogg","INTERFACE/ICONS/ability_deathknight_hemorrhagicfever"},
   {"TooSoon","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\TooSoon.ogg","INTERFACE/ICONS/spell_holy_borrowedtime"},
   {"ScrewYou","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ScrewAllOfYou.ogg","INTERFACE/ICONS/inv_misc_screwdriver_01"},
   {"ManUp","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ManUp.ogg","INTERFACE/ICONS/Achievement_Dungeon_Bastion of Twilight_Chogall Boss"},
   {"Kos","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Kos.ogg","INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood"},
+  -- {"Delicious","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Delicious.ogg","INTERFACE/ICONS/INV_Misc_Food_Meat_Raw_08"},
+  {"Delicious","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Delicious.ogg","INTERFACE/ICONS/Ability_IronMaidens_SorkasPrey"},
   {"ArranYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ArranYeah.ogg","INTERFACE/ICONS/Spell_Holy_FistOfJustice"},
   {"OhYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OhYeah.ogg","INTERFACE/ICONS/INV_Relics_TotemofRage"},
   {"ComeOn","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ComeOn.ogg","INTERFACE/ICONS/Ability_Racial_Avatar"},
@@ -66,7 +69,13 @@ SOUND_TABLE = {
   {"Scars","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\scars.ogg","INTERFACE/ICONS/ability_demonhunter_feldevastation"},
   {"break","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\brokeit.ogg","INTERFACE/ICONS/inv_catslime"},
   {"Gagged","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\gagged.ogg","INTERFACE/ICONS/inv_leather_demonhunter_blindfold_01"},
-  {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/misc_arrowdown"}
+  -- {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/Achievement_Boss_Durumu"},
+  -- {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/Spell_Magic_PolymorphChicken"},
+  {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/INV_Chicken2_Brown"},
+  {"Down","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BoogieDown.ogg","INTERFACE/ICONS/misc_arrowdown"},
+  {"Left","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\SashayLeft.ogg","INTERFACE/ICONS/misc_arrowleft"},
+  {"Up","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\PranceForward.ogg","INTERFACE/ICONS/misc_arrowlup"},
+  {"Right","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ShimmyRight.ogg","INTERFACE/ICONS/misc_arrowright"},
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
