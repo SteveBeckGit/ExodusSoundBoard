@@ -33,7 +33,7 @@ SOUND_TABLE = {
   {"Bloodlust","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bloodlust.ogg","INTERFACE/ICONS/spell_nature_bloodlust", FILTER_BRUCE},
   {"Champion!","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Champion.ogg","INTERFACE/ICONS/inv__faction_championsofazeroth", FILTER_BRUCE},
   {"Popcorn","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\popcorn.ogg","INTERFACE/ICONS/inv_misc_popcorntoy", FILTER_BRUCE},
-  {"Sorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sorry.ogg","INTERFACE/ICONS/spell_misc_emotionafraid", FILTER_LANCE},
+  {"Sorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sorry.ogg","INTERFACE/ICONS/spell_misc_emotionafraid", FILTER_LANCE},as
   {"ClaireSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ClaireSorry.ogg","INTERFACE/ICONS/Achievement_Dungeon_RixxaFluxfume", FILTER_OTHER},
   {"What","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\What.ogg","INTERFACE/ICONS/ability_rogue_surpriseattack", FILTER_BRUCE},
   -- {"Bastard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bastard.ogg","INTERFACE/ICONS/ability_warrior_commandingshout"},
@@ -75,6 +75,7 @@ SOUND_TABLE = {
   {"Aceso","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Aceso.ogg","INTERFACE/ICONS/Spell_Holy_SurgeOfLight", FILTER_BRUCE},
   {"UmmWhat","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Umm.ogg","INTERFACE/ICONS/INV_Misc_QuestionMark", FILTER_OTHER},
   {"Scars","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\scars.ogg","INTERFACE/ICONS/ability_demonhunter_feldevastation", FILTER_OTHER},
+  {"Lube","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\lubing.ogg","INTERFACE/ICONS/Achievement_raid_revendrethraid_siredenathrius", FILTER_WARREN},
   {"break","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\brokeit.ogg","INTERFACE/ICONS/inv_catslime", FILTER_LANCE},
   {"Gagged","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\gagged.ogg","INTERFACE/ICONS/inv_leather_demonhunter_blindfold_01", FILTER_BRUCE},
   -- {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/Achievement_Boss_Durumu"},
