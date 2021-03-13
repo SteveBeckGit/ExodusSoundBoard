@@ -33,7 +33,7 @@ SOUND_TABLE = {
   {"Bloodlust","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bloodlust.ogg","INTERFACE/ICONS/spell_nature_bloodlust", FILTER_BRUCE},
   {"Champion!","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Champion.ogg","INTERFACE/ICONS/inv__faction_championsofazeroth", FILTER_BRUCE},
   {"Popcorn","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\popcorn.ogg","INTERFACE/ICONS/inv_misc_popcorntoy", FILTER_BRUCE},
-  {"Sorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sorry.ogg","INTERFACE/ICONS/spell_misc_emotionafraid", FILTER_LANCE},as
+  {"Sorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sorry.ogg","INTERFACE/ICONS/spell_misc_emotionafraid", FILTER_LANCE},
   {"ClaireSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ClaireSorry.ogg","INTERFACE/ICONS/Achievement_Dungeon_RixxaFluxfume", FILTER_OTHER},
   {"What","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\What.ogg","INTERFACE/ICONS/ability_rogue_surpriseattack", FILTER_BRUCE},
   -- {"Bastard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bastard.ogg","INTERFACE/ICONS/ability_warrior_commandingshout"},
@@ -84,7 +84,7 @@ SOUND_TABLE = {
   {"Down","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BoogieDown.ogg","INTERFACE/ICONS/misc_arrowdown", FILTER_OTHER},
   {"Left","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\SashayLeft.ogg","INTERFACE/ICONS/misc_arrowleft", FILTER_OTHER},
   {"Up","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\PranceForward.ogg","INTERFACE/ICONS/misc_arrowlup", FILTER_OTHER},
-  {"Right","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ShimmyRight.ogg","INTERFACE/ICONS/misc_arrowright", FILTER_OTHER},
+  {"Right","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ShimmyRight.ogg","INTERFACE/ICONS/misc_arrowright", FILTER_OTHER}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
