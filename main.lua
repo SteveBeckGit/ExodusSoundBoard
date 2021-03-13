@@ -99,7 +99,6 @@ local OUTER_HORIZONTAL_SPACING = 10
 local LEADERBOARD_Y_OFFSET = -10
 local FILTER_BAR_SPACING = 80
 local mainUiCreated = false
-local minMainFrameHeight = 0
 
 local frame = CreateFrame("FRAME"); -- Need a frame to respond to events
 frame:RegisterEvent("ADDON_LOADED"); -- Fired when saved variables are loaded
@@ -149,6 +148,17 @@ function setupMainUI()
     insets = { left = 4, right = 4, top = 4, bottom = 4 },
   })
 
+  local scrollFrame = CreateFrame("ScrollFrame", "ButtonScrollFrame", MainFrame, "UIPanelScrollFrameTemplate")
+  -- scrollFrame:SetMovable(true)
+  -- scrollFrame:SetFrameStrata("DIALOG")
+  scrollFrame:SetSize(330, 288)
+  scrollFrame:SetPoint("TOPLEFT", MainFrame, "TOPLEFT", 0,  -60)
+  -- scrollFrame:SetHitRectInsets(100, 0, -100, 0)
+  scrollFrame:SetScrollChild(ButtonFrame)
+  scrollFrame:Show()
+
+  ButtonFrame:Show()
+
   OptionsFrame:SetBackdrop({
     bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
     edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",
@@ -167,7 +177,7 @@ function setupMainUI()
   -- We create as many buttons as we will need, and reuse them by keeping track of them in a table
   -- and updating values when necessary.
   for i, sound in ipairs(SOUND_TABLE) do
-    local button = CreateFrame("Button", "Button" .. i, MainFrame, "UIPanelButtonTemplate")
+    local button = CreateFrame("Button", "Button" .. i, ButtonFrame, "UIPanelButtonTemplate")
     button:SetFrameLevel(3)
     table.insert(buttonTable, button)
   end
@@ -206,7 +216,7 @@ function createButtons()
           row = math.floor(numActiveButtons / (BTNS_PER_ROW))
         end   
         local col = (numActiveButtons - 1) - (row * BTNS_PER_ROW)
-        button:SetPoint("TOPLEFT", FILTER_BAR_SPACING + OUTER_HORIZONTAL_SPACING + col * BTN_SIZE, -60 - (row * BTN_SIZE))
+        button:SetPoint("TOPLEFT", FILTER_BAR_SPACING + OUTER_HORIZONTAL_SPACING + col * BTN_SIZE, -(row * BTN_SIZE))
         button:SetSize(BTN_SIZE, BTN_SIZE)
         button:SetNormalTexture(SOUND_TABLE[i][3])
         button.tooltipText = SOUND_TABLE[i][1]
@@ -226,20 +236,6 @@ function createButtons()
     for i = numActiveButtons + 1, numSounds do
       buttonTable[i]:Hide()
     end
-  
-    --set up the frame for the buttons based on number of rows
-    local numRows = 0
-    if (numActiveButtons % BTNS_PER_ROW == 0) then
-      numRows = numActiveButtons / BTNS_PER_ROW
-    else
-      numRows = math.floor(numActiveButtons / BTNS_PER_ROW) + 1
-    end
-    local mainFrameHeight = numRows * BTN_SIZE + 72
-    -- Must not set height of main frame to less than height of filter list
-    if (mainFrameHeight < minMainFrameHeight) then
-      mainFrameHeight = minMainFrameHeight
-    end
-    MainFrame:SetSize(FILTER_BAR_SPACING + BTNS_PER_ROW * BTN_SIZE + OUTER_HORIZONTAL_SPACING * 2, mainFrameHeight)
 end
 
 function setupOptionsUI()

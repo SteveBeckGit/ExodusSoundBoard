@@ -1,171 +1,212 @@
 <Ui>
   <Script file="main.lua"/>
   <Frame name="MainFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true" inherits="BackdropTemplate">
+    <Size x="360" y="360"/>
     <Scripts>
-     <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
-     <OnDragStart>self:StartMoving();</OnDragStart>
-     <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+      <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+      <OnDragStart>self:StartMoving();</OnDragStart>
+      <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
     </Scripts>
 
-    <Anchors><Anchor point="CENTER"/></Anchors>
-    
+    <Anchors>
+      <Anchor point="CENTER"/>
+    </Anchors>
+
     <Layers>
       <!-- Window Header -->
-  		<Layer level="ARTWORK">
-    			<Texture file="Interface\DialogFrame\UI-DialogBox-Header">
-    				<Size><AbsDimension x="370" y="64"/></Size>
-    				<Anchors>
-    					<Anchor point="TOP">
-    					<Offset><AbsDimension x="0" y="12"/></Offset>
-    					</Anchor>
-    				</Anchors>
-    			</Texture>
-    		</Layer>
-    		<Layer level="OVERLAY">
-    			<FontString inherits="GameFontNormal" text="Exodus Sound Board">
-    				<Anchors>
-    					<Anchor point="TOP" relativeTo="$parent">
-							<Offset><AbsDimension x="0" y="-2"/></Offset>
-						</Anchor>
-    				</Anchors>
-    			</FontString>
-    		</Layer>
-    	</Layers>
+      <Layer level="ARTWORK">
+        <Texture file="Interface\DialogFrame\UI-DialogBox-Header">
+          <Size>
+            <AbsDimension x="370" y="64"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="12"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+      <Layer level="OVERLAY">
+        <FontString inherits="GameFontNormal" text="Exodus Sound Board">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parent">
+              <Offset>
+                <AbsDimension x="0" y="-2"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
 
-      <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
-      <Frames>
-	  <Button name="LeaderboardButton" inherits="OptionsButtonTemplate" text="Leaderboard">
-          <Size x="90" y="25"/>
-            <Anchors>
-                <Anchor point="TOPLEFT">
-                    <Offset><AbsDimension x="10" y="-28"/></Offset>
-                </Anchor>
-            </Anchors>
-            <Scripts>
-                <OnClick>setupLeaderboardUI()</OnClick>
-            </Scripts>
-        </Button>
-		<Button name="OptionsButton" inherits="OptionsButtonTemplate" text="Options">
-          <Size x="90" y="25"/>
-            <Anchors>
-                <Anchor point="TOPRIGHT">
-                    <Offset><AbsDimension x="-10" y="-28"/></Offset>
-                </Anchor>
-            </Anchors>
-            <Scripts>
-                <OnClick>setupOptionsUI()</OnClick>
-            </Scripts>
-        </Button>
-        <!-- close button -->
-        <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
-          <Size x="32" y="16"/>
-            <Anchors>
-                <Anchor point="TOPRIGHT">
-                    <Offset><AbsDimension x="0" y="0"/></Offset>
-                </Anchor>
-            </Anchors>
-            <Scripts>
-                <OnClick>MainFrame:Hide(); </OnClick>
-            </Scripts>
-        </Button>
-      </Frames>
+    <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
+    <Frames>
+      <Button name="LeaderboardButton" inherits="OptionsButtonTemplate" text="Leaderboard">
+        <Size x="90" y="25"/>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="10" y="-28"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>setupLeaderboardUI()</OnClick>
+        </Scripts>
+      </Button>
+      <Button name="OptionsButton" inherits="OptionsButtonTemplate" text="Options">
+        <Size x="90" y="25"/>
+        <Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="-10" y="-28"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>setupOptionsUI()</OnClick>
+        </Scripts>
+      </Button>
+      <!-- close button -->
+      <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
+        <Size x="32" y="16"/>
+        <Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>MainFrame:Hide(); </OnClick>
+        </Scripts>
+      </Button>
+
+      <Frame name="ButtonFrame">
+        <Size x="330" y="288"/>
+      </Frame>
+
+    </Frames>
+
   </Frame>
 
   <Frame name="OptionsFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true" inherits="BackdropTemplate">
     <Scripts>
-     <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
-     <OnDragStart>self:StartMoving();</OnDragStart>
-     <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+      <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+      <OnDragStart>self:StartMoving();</OnDragStart>
+      <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
     </Scripts>
 
-	<Size x="260" y="130"/>
+    <Size x="260" y="130"/>
 
-    <Anchors><Anchor point="CENTER"/></Anchors>
+    <Anchors>
+      <Anchor point="CENTER"/>
+    </Anchors>
 
     <Layers>
       <!-- Window Header -->
-  		<Layer level="ARTWORK">
-    			<Texture file="Interface\DialogFrame\UI-DialogBox-Header">
-    				<Size><AbsDimension x="370" y="64"/></Size>
-    				<Anchors>
-    					<Anchor point="TOP">
-    					<Offset><AbsDimension x="0" y="12"/></Offset>
-    					</Anchor>
-    				</Anchors>
-    			</Texture>
-    		</Layer>
-    		<Layer level="OVERLAY">
-    			<FontString inherits="GameFontNormal" text="ESB Options">
-    				<Anchors>
-    					<Anchor point="TOP" relativeTo="$parent">
-							<Offset><AbsDimension x="0" y="-2"/></Offset>
-						</Anchor>						
-    				</Anchors>
-    			</FontString>
-    		</Layer>
-    	</Layers>
-      <Frames>
-        <!-- close button -->
-        <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
-          <Size x="32" y="16"/>
-            <Anchors>
-                <Anchor point="TOPRIGHT">
-                    <Offset><AbsDimension x="0" y="0"/></Offset>
-                </Anchor>
-            </Anchors>
-            <Scripts>
-                <OnClick>setupOptionsUI()</OnClick>
-            </Scripts>
-        </Button>
-      </Frames>
+      <Layer level="ARTWORK">
+        <Texture file="Interface\DialogFrame\UI-DialogBox-Header">
+          <Size>
+            <AbsDimension x="370" y="64"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="12"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+      <Layer level="OVERLAY">
+        <FontString inherits="GameFontNormal" text="ESB Options">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parent">
+              <Offset>
+                <AbsDimension x="0" y="-2"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Frames>
+      <!-- close button -->
+      <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
+        <Size x="32" y="16"/>
+        <Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>setupOptionsUI()</OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
   </Frame>
 
   <Frame name="LeaderboardFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" enableMouse="true" movable="true" hidden="true" inherits="BackdropTemplate">
     <Scripts>
-     <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
-     <OnDragStart>self:StartMoving();</OnDragStart>
-     <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+      <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+      <OnDragStart>self:StartMoving();</OnDragStart>
+      <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
     </Scripts>
 
-    <Anchors><Anchor point="CENTER"/></Anchors>
+    <Anchors>
+      <Anchor point="CENTER"/>
+    </Anchors>
 
     <Layers>
       <!-- Window Header -->
-  		<Layer level="ARTWORK">
-    			<Texture file="Interface\DialogFrame\UI-DialogBox-Header">
-    				<Size><AbsDimension x="370" y="64"/></Size>
-    				<Anchors>
-    					<Anchor point="TOP">
-    					<Offset><AbsDimension x="0" y="12"/></Offset>
-    					</Anchor>
-    				</Anchors>
-    			</Texture>
-    		</Layer>
-    		<Layer level="OVERLAY">
-    			<FontString inherits="GameFontNormal" text="ESB Leaderboard">
-    				<Anchors>
-    					<Anchor point="TOP" relativeTo="$parent">
-							<Offset><AbsDimension x="0" y="-2"/></Offset>
-						</Anchor>						
-    				</Anchors>
-    			</FontString>
-    		</Layer>
-    	</Layers>
+      <Layer level="ARTWORK">
+        <Texture file="Interface\DialogFrame\UI-DialogBox-Header">
+          <Size>
+            <AbsDimension x="370" y="64"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="12"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+      <Layer level="OVERLAY">
+        <FontString inherits="GameFontNormal" text="ESB Leaderboard">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parent">
+              <Offset>
+                <AbsDimension x="0" y="-2"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
 
-      <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
-      <Frames>
-        <!-- close button -->
-        <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
-          <Size x="32" y="16"/>
-            <Anchors>
-                <Anchor point="TOPRIGHT">
-                    <Offset><AbsDimension x="0" y="0"/></Offset>
-                </Anchor>
-            </Anchors>
-            <Scripts>
-                <OnClick>LeaderboardFrame:Hide(); </OnClick>
-            </Scripts>
-        </Button>
-      </Frames>
+    <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
+    <Frames>
+      <!-- close button -->
+      <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
+        <Size x="32" y="16"/>
+        <Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>LeaderboardFrame:Hide(); </OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
   </Frame>
 </Ui>
