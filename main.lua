@@ -136,6 +136,20 @@ SlashCmdList["ESB"] = function(msg)
   end
 end
 
+-- Function to specify scroll distance.
+-- Override default script on scroll frame with this
+local function scrollFrame_OnMouseWheel(self, delta)
+  local newValue = self:GetVerticalScroll() - (delta * 24);
+
+  if (newValue < 0) then
+    newValue = 0;
+  elseif (newValue > self:GetVerticalScrollRange()) then
+    newValue = self:GetVerticalScrollRange();
+  end
+
+  self:SetVerticalScroll(newValue);
+end
+
 function setupMainUI()
   if (mainUiCreated) then
     return
@@ -149,12 +163,10 @@ function setupMainUI()
   })
 
   local scrollFrame = CreateFrame("ScrollFrame", "ButtonScrollFrame", MainFrame, "UIPanelScrollFrameTemplate")
-  -- scrollFrame:SetMovable(true)
-  -- scrollFrame:SetFrameStrata("DIALOG")
   scrollFrame:SetSize(330, 288)
   scrollFrame:SetPoint("TOPLEFT", MainFrame, "TOPLEFT", 0,  -60)
-  -- scrollFrame:SetHitRectInsets(100, 0, -100, 0)
   scrollFrame:SetScrollChild(ButtonFrame)
+  scrollFrame:SetScript("OnMouseWheel", scrollFrame_OnMouseWheel); -- Override default blizzard scroll script with our own
   scrollFrame:Show()
 
   ButtonFrame:Show()
