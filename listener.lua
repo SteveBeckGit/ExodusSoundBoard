@@ -34,10 +34,8 @@ function playSoundIfExists(msg, sender)
     --     randomizeSound(msg)
     -- end
             -- iterate over all sounds in order, check for match and return if one is found
-    msg = string.lower(msg)
     for i, sound in ipairs(SOUND_TABLE) do
-        soundName = string.lower(sound[1])
-        if (string.find(msg, soundName)) then 
+        if (string.find(msg, sound[1])) then 
             updateLeaderboard(sender)
             PlaySoundFile(sound[2], "Master") --sound[2] is the filepath to the sound clip
             return
