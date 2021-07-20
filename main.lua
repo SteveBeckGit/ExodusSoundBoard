@@ -83,8 +83,9 @@ SOUND_TABLE = {
   {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/INV_Chicken2_Brown", FILTER_WARREN},
   {"Down","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BoogieDown.ogg","INTERFACE/ICONS/misc_arrowdown", FILTER_OTHER},
   {"Left","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\SashayLeft.ogg","INTERFACE/ICONS/misc_arrowleft", FILTER_OTHER},
-  {"Up","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\PranceForward.ogg","INTERFACE/ICONS/misc_arrowlup", FILTER_OTHER},
-  {"Right","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ShimmyRight.ogg","INTERFACE/ICONS/misc_arrowright", FILTER_OTHER}
+  {"Forward","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\PranceForward.ogg","INTERFACE/ICONS/misc_arrowlup", FILTER_OTHER},
+  {"Right","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ShimmyRight.ogg","INTERFACE/ICONS/misc_arrowright", FILTER_OTHER},
+  {"put it in","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NotPuttingItIn.ogg","INTERFACE/ICONS/INV_Misc_Food_53", FILTER_BRUCE}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
