@@ -83,8 +83,14 @@ SOUND_TABLE = {
   {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/INV_Chicken2_Brown", FILTER_WARREN},
   {"Down","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BoogieDown.ogg","INTERFACE/ICONS/misc_arrowdown", FILTER_OTHER},
   {"Left","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\SashayLeft.ogg","INTERFACE/ICONS/misc_arrowleft", FILTER_OTHER},
-  {"Up","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\PranceForward.ogg","INTERFACE/ICONS/misc_arrowlup", FILTER_OTHER},
-  {"Right","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ShimmyRight.ogg","INTERFACE/ICONS/misc_arrowright", FILTER_OTHER}
+  {"Forward","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\PranceForward.ogg","INTERFACE/ICONS/misc_arrowlup", FILTER_OTHER},
+  {"Right","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ShimmyRight.ogg","INTERFACE/ICONS/misc_arrowright", FILTER_OTHER},
+  {"Not putting it in","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NotPuttingItIn.ogg","INTERFACE/ICONS/Achievement_Profession_Fishing_OldManBarlowned", FILTER_OTHER},
+  {"stop talking garnaph","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\StopTalkingGarnaph.ogg","INTERFACE/ICONS/SPELL_HOLY_SILENCE", FILTER_OTHER},
+  {"no balls","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NoBalls.ogg","INTERFACE/ICONS/6BF_Rolling_Fury", FILTER_OTHER},
+  {"not that hard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NotThatHard.ogg","INTERFACE/ICONS/Achievement_Halloween_Worms_01", FILTER_OTHER},
+  {"strats","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RaidLeaderTalking.ogg","INTERFACE/ICONS/INV_Misc_Primitive_toy02", FILTER_OTHER},
+  {"useless","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceFkingUseless.ogg","INTERFACE/ICONS/Spell_Nature_HeavyPolymorph1", FILTER_OTHER}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
