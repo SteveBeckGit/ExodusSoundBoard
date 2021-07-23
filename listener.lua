@@ -49,6 +49,7 @@ end
 function isChatEvent(event)
     if (event=="CHAT_MSG_RAID" 
         or event=="CHAT_MSG_SAY" 
+        or event=="CHAT_MSG_YELL"
         or event=="CHAT_MSG_WHISPER" 
         or event=="CHAT_MSG_GUILD" 
         or event=="CHAT_MSG_PARTY" 
