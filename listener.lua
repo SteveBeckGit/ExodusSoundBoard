@@ -4,6 +4,7 @@ frame:RegisterEvent("CHAT_MSG_PARTY_LEADER");
 frame:RegisterEvent("CHAT_MSG_RAID_LEADER");
 frame:RegisterEvent("CHAT_MSG_GUILD");
 frame:RegisterEvent("CHAT_MSG_SAY");
+frame:RegisterEvent("CHAT_MSG_YELL");
 frame:RegisterEvent("CHAT_MSG_WHISPER");
 frame:RegisterEvent("CHAT_MSG_BN_WHISPER");
 frame:RegisterEvent("CHAT_MSG_PARTY");-- Register our event
