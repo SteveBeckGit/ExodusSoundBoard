@@ -43,7 +43,7 @@
 
     <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
     <Frames>
-      <Button name="LeaderboardButton" inherits="OptionsButtonTemplate" text="Leaderboard">
+      <Button name="LeaderboardButton" inherits="UIPanelButtonTemplate" text="Leaderboard">
         <Size x="90" y="25"/>
         <Anchors>
           <Anchor point="TOPLEFT">
@@ -56,7 +56,7 @@
           <OnClick>setupLeaderboardUI()</OnClick>
         </Scripts>
       </Button>
-      <Button name="OptionsButton" inherits="OptionsButtonTemplate" text="Options">
+      <Button name="OptionsButton" inherits="UIPanelButtonTemplate" text="Options">
         <Size x="90" y="25"/>
         <Anchors>
           <Anchor point="TOPRIGHT">
@@ -70,7 +70,7 @@
         </Scripts>
       </Button>
       <!-- close button -->
-      <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
+      <Button name="$parentButtonClose" inherits="UIPanelButtonTemplate" text="X">
         <Size x="32" y="16"/>
         <Anchors>
           <Anchor point="TOPRIGHT">
@@ -135,7 +135,7 @@
     </Layers>
     <Frames>
       <!-- close button -->
-      <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
+      <Button name="$parentButtonClose" inherits="UIPanelButtonTemplate" text="X">
         <Size x="32" y="16"/>
         <Anchors>
           <Anchor point="TOPRIGHT">
@@ -194,7 +194,7 @@
     <!-- "Red Wrench","Purple Chicken","Green Spring","Yellow Bolt","Blue Gear" -->
     <Frames>
       <!-- close button -->
-      <Button name="$parentButtonClose" inherits="OptionsButtonTemplate" text="X">
+      <Button name="$parentButtonClose" inherits="UIPanelButtonTemplate" text="X">
         <Size x="32" y="16"/>
         <Anchors>
           <Anchor point="TOPRIGHT">
