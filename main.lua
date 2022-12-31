@@ -91,7 +91,10 @@ SOUND_TABLE = {
   {"not that hard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NotThatHard.ogg","INTERFACE/ICONS/Achievement_Halloween_Worms_01", FILTER_OTHER},
   {"strats","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RaidLeaderTalking.ogg","INTERFACE/ICONS/INV_Misc_Primitive_toy02", FILTER_OTHER},
   {"useless","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceFkingUseless.ogg","INTERFACE/ICONS/Spell_Nature_HeavyPolymorph1", FILTER_OTHER},
-  {"wrathion","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\waffion.ogg","INTERFACE/ICONS/achievement_nzothraid_wrathion", FILTER_OTHER}
+  {"wrathion","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\waffion.ogg","INTERFACE/ICONS/achievement_nzothraid_wrathion", FILTER_OTHER},
+  {"fly","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\letfly.ogg","INTERFACE/ICONS/pet_type_flying", FILTER_OTHER},
+  {"hands","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\hands.ogg","INTERFACE/ICONS/ability_paladin_blessedhands", FILTER_OTHER},
+  {"winds","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\winds.ogg","INTERFACE/ICONS/achievement_raidprimalist_windelemental", FILTER_OTHER}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
