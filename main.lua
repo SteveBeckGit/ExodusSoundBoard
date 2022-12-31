@@ -90,7 +90,8 @@ SOUND_TABLE = {
   {"no balls","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NoBalls.ogg","INTERFACE/ICONS/6BF_Rolling_Fury", FILTER_OTHER},
   {"not that hard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\NotThatHard.ogg","INTERFACE/ICONS/Achievement_Halloween_Worms_01", FILTER_OTHER},
   {"strats","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\RaidLeaderTalking.ogg","INTERFACE/ICONS/INV_Misc_Primitive_toy02", FILTER_OTHER},
-  {"useless","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceFkingUseless.ogg","INTERFACE/ICONS/Spell_Nature_HeavyPolymorph1", FILTER_OTHER}
+  {"useless","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BruceFkingUseless.ogg","INTERFACE/ICONS/Spell_Nature_HeavyPolymorph1", FILTER_OTHER},
+  {"wrathion","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\waffion.ogg","INTERFACE/ICONS/achievement_nzothraid_wrathion", FILTER_OTHER}
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
