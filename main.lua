@@ -5,7 +5,8 @@ FILTER_ARRAN = "Arran"
 FILTER_LANCE = "Lance"
 FILTER_STEVE = "Steve"
 FILTER_OTHER = "Other"
-FILTER_TABLE = {FILTER_BRUCE, FILTER_WARREN, FILTER_ARRAN, FILTER_LANCE, FILTER_STEVE, FILTER_OTHER}
+FILTER_DARYN = "Daryn"
+FILTER_TABLE = {FILTER_BRUCE, FILTER_WARREN, FILTER_ARRAN, FILTER_LANCE, FILTER_STEVE,FILTER_DARYN, FILTER_OTHER}
 --table containing all the commands as well as their filepaths and icons
 --intended to be referenced throughout the addon, our central source of info
 --lua does not preserve order of elements in table 
@@ -94,7 +95,18 @@ SOUND_TABLE = {
   {"wrathion","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\waffion.ogg","INTERFACE/ICONS/achievement_nzothraid_wrathion", FILTER_OTHER},
   {"fly","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\letfly.ogg","INTERFACE/ICONS/pet_type_flying", FILTER_OTHER},
   {"hands","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\hands.ogg","INTERFACE/ICONS/ability_paladin_blessedhands", FILTER_OTHER},
-  {"winds","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\winds.ogg","INTERFACE/ICONS/achievement_raidprimalist_windelemental", FILTER_OTHER}
+  {"winds","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\winds.ogg","INTERFACE/ICONS/achievement_raidprimalist_windelemental", FILTER_OTHER},
+  {"balls","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ballsGimmeBalls.ogg","INTERFACE/ICONS/Item_enchantedpearl",FILTER_WARREN},
+  {"wash","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\washMyHands.ogg","INTERFACE/ICONS/Classicon_warlock",FILTER_BRUCE},
+  {"get off","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\getOff.ogg","INTERFACE/ICONS/spell_frost_frostshock",FILTER_WARREN},
+  {"massive","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\fkingMassive.ogg","INTERFACE/ICONS/spell_chargepositive",FILTER_OTHER},
+  {"mosquito","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\fkingMosquito.ogg","INTERFACE/ICONS/spell_shadow_carrionswarm",FILTER_WARREN},
+  {"clip that","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\clipThat.ogg","INTERFACE/ICONS/trade_archaeology_zinrokh-sword",FILTER_WARREN},
+  {"do me","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\doMe.ogg","INTERFACE/ICONS/ability_racial_vulperasurvivalkit",FILTER_DARYN},
+    {"hes coming","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\hesComing.ogg","INTERFACE/ICONS/inv_misc_8xp_balloon_murloc01",FILTER_WARREN},
+    {"mouth","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\twoLilballs.ogg","INTERFACE/ICONS/inv_misc_discoball_01",FILTER_WARREN}
+    
+
 }
 ADDON_PREFIX = "ESB1337"
 ADDON_NAME = "ExodusSoundBoard"
