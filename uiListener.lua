@@ -1,25 +1,18 @@
 local frame=CreateFrame("Frame");-- Need a frame to capture events
 frame:RegisterEvent("CHAT_MSG_ADDON");
-C_ChatInfo.RegisterAddonMessagePrefix(ADDON_PREFIX)
+C_ChatInfo.RegisterAddonMessagePrefix(UI_ADDON_PREFIX)
 
 LEADERBOARD_TABLE = {} -- table structure is as follows: { playerName = {count, isMuted}, ...}
 LEADERBOARD_TABLE_SIZE = 0
 
 frame:SetScript("OnEvent",function(self,event,prefix,msg,channel,sender)-- OnEvent handler receives event triggers
-    if (isUiEvent(event, prefix) and AddonEnabled) then
+    if (isUiAddonEvent(event, prefix) and AddonEnabled) then
         updateLeaderboard(sender)
         if (UiEnabled and checkCombat() and isSenderMuted(sender) == false) then
             PlaySoundFile(msg, "Master") --msg is the sound filepath in this case, as it is being sent from the UI
         end
     end
 end);
-
-function isUiEvent(event, prefix)
-    if (event=="CHAT_MSG_ADDON" and prefix == ADDON_PREFIX) then
-        return true
-    end
-    return false
-end
 
 function updateLeaderboard(sender)
     if (LEADERBOARD_TABLE[sender] ~= nil) then
