@@ -16,8 +16,10 @@ eventCapture:SetScript("OnEvent",function(self,event, ...)
         -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\pArK.ogg","Master")
         -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\YouDidntSuck.ogg","Master")
     end
+    elseif(checkStatusEncounterStart(event)) then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\letfly.ogg","Master")
+    end
 end);
-
 
 
 function checkStatusTrue(event, success)
@@ -31,6 +33,15 @@ end
 
 function checkStatus(event, success)
     if (event=="ENCOUNTER_END"  and success == 0  
+    )
+     then
+        return true
+    else return false
+    end    
+end
+
+function checkStatusEncounterStart(event)
+    if (event=="ENCOUNTER_START"
     )
      then
         return true
