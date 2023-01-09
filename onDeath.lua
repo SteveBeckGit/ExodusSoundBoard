@@ -1,12 +1,19 @@
 local eventCapture=CreateFrame("Frame");-- Need a frame to capture events
 eventCapture:RegisterEvent("ENCOUNTER_END");
+eventCapture:RegisterEvent("ENCOUNTER_START");
 
 eventCapture:SetScript("OnEvent",function(self,event, ...)
     if (AddonEnabled == false) then 
         return --don't run any commands if addon is disabled
     end 
 
+    if(event=="ENCOUNTER_START") then
+        PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\letfly.ogg","Master")
+        return
+    end
+
     local encounterId, encounterName, difficultyID, groupSize, success = ...;
+
     if(checkStatus(event, success)) then
         PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\AssFeelin.ogg","Master")
         -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BadGuysWin.ogg","Master")
@@ -17,7 +24,6 @@ eventCapture:SetScript("OnEvent",function(self,event, ...)
         -- PlaySoundFile("Interface\\AddOns\\ExodusSoundBoard\\Sounds\\YouDidntSuck.ogg","Master")
     end
 end);
-
 
 
 function checkStatusTrue(event, success)
