@@ -108,9 +108,6 @@ SOUND_TABLE = {
     
 
 }
-ADDON_PREFIX = "ESB1337"
-ADDON_NAME = "ExodusSoundBoard"
-
 local appliedFilterTable = {}
 local buttonTable = {}
 
@@ -401,13 +398,13 @@ end
 
 function SendAllAddonMessages(soundFilepath)
   if (AddonEnabled and UiEnabled) then --only allow users to use the UI if their settings are enabled
-    if (UnitExists("target") and (UnitIsPlayer("target"))) then C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "WHISPER", GetUnitName("target", 1)) end;
+    if (UnitExists("target") and (UnitIsPlayer("target"))) then C_ChatInfo.SendAddonMessage(UI_ADDON_PREFIX, soundFilepath, "WHISPER", GetUnitName("target", 1)) end;
     if (IsInRaid()) then
-      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "RAID")
+      C_ChatInfo.SendAddonMessage(UI_ADDON_PREFIX, soundFilepath, "RAID")
     elseif (IsInGroup()) then
-      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "PARTY")
+      C_ChatInfo.SendAddonMessage(UI_ADDON_PREFIX, soundFilepath, "PARTY")
     else
-      C_ChatInfo.SendAddonMessage(ADDON_PREFIX, soundFilepath, "WHISPER", GetUnitName("player", 1))
+      C_ChatInfo.SendAddonMessage(UI_ADDON_PREFIX, soundFilepath, "WHISPER", GetUnitName("player", 1))
     end
   end
 end
@@ -419,24 +416,4 @@ function setFilter(filter)
     removeFromSet(appliedFilterTable, filter)
   end
   createButtons()
-end
-
-function addToSet(set, key)
-  set[key] = true
-end
-
-function removeFromSet(set, key)
-  set[key] = nil
-end
-
-function setContains(set, key)
-  return set[key] ~= nil
-end
-
-function getTableSize(t)
-  local count = 0
-  for _, __ in pairs(t) do
-      count = count + 1
-  end
-  return count
 end

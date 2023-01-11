@@ -1,12 +1,17 @@
 ## Interface: 80300
 ## Title: Exodus Sound Board
 ## Author: Stan
-## Version: 1.2
+## Version: 1.3
 ## SavedVariables: AddonEnabled, ChatEnabled, UiEnabled, CombatEnabled
 
 UI.xml
+Constants.lua
+AddonEventHelper.lua
+SetHelper.lua
+StringHelper.lua
 listener.lua
 uiListener.lua
 main.lua
 onDeath.lua
+VersionChecker.lua
 
