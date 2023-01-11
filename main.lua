@@ -37,8 +37,6 @@ SOUND_TABLE = {
   {"Sorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Sorry.ogg","INTERFACE/ICONS/spell_misc_emotionafraid", FILTER_LANCE},
   {"ClaireSorry","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ClaireSorry.ogg","INTERFACE/ICONS/Achievement_Dungeon_RixxaFluxfume", FILTER_OTHER},
   {"What","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\What.ogg","INTERFACE/ICONS/ability_rogue_surpriseattack", FILTER_BRUCE},
-  -- {"Bastard","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Bastard.ogg","INTERFACE/ICONS/ability_warrior_commandingshout"},
-  -- {"GoodJob","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\GoodJob.ogg","INTERFACE/ICONS/thumbsup"},
   {"HiThere","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\HiThere.ogg","INTERFACE/ICONS/ability_paladin_handoflight", FILTER_OTHER},
   {"Zuma","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Zuma.ogg","INTERFACE/ICONS/inv_helm_laughingskull_01", FILTER_STEVE},
   {"FancyMeeting","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\FancyMeetingYouHere.ogg","INTERFACE/ICONS/inv_garrison_hearthstone", FILTER_WARREN},
@@ -56,7 +54,6 @@ SOUND_TABLE = {
   {"ScrewYou","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ScrewAllOfYou.ogg","INTERFACE/ICONS/inv_misc_screwdriver_01", FILTER_BRUCE},
   {"ManUp","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ManUp.ogg","INTERFACE/ICONS/Achievement_Dungeon_Bastion of Twilight_Chogall Boss", FILTER_LANCE},
   {"Kos","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Kos.ogg","INTERFACE/ICONS/INV_Tradeskill_Cooking_FeastofBlood", FILTER_OTHER},
-  -- {"Delicious","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Delicious.ogg","INTERFACE/ICONS/INV_Misc_Food_Meat_Raw_08"},
   {"Delicious","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\Delicious.ogg","INTERFACE/ICONS/Ability_IronMaidens_SorkasPrey", FILTER_OTHER},
   {"ArranYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\ArranYeah.ogg","INTERFACE/ICONS/Spell_Holy_FistOfJustice", FILTER_ARRAN},
   {"OhYeah","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\OhYeah.ogg","INTERFACE/ICONS/INV_Relics_TotemofRage", FILTER_OTHER},
@@ -79,8 +76,6 @@ SOUND_TABLE = {
   {"Lube","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\lubing.ogg","INTERFACE/ICONS/Achievement_raid_revendrethraid_siredenathrius", FILTER_WARREN},
   {"break","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\brokeit.ogg","INTERFACE/ICONS/inv_catslime", FILTER_LANCE},
   {"Gagged","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\gagged.ogg","INTERFACE/ICONS/inv_leather_demonhunter_blindfold_01", FILTER_BRUCE},
-  -- {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/Achievement_Boss_Durumu"},
-  -- {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/Spell_Magic_PolymorphChicken"},
   {"NotUP","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\notgotitup.ogg","INTERFACE/ICONS/INV_Chicken2_Brown", FILTER_WARREN},
   {"Down","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\BoogieDown.ogg","INTERFACE/ICONS/misc_arrowdown", FILTER_OTHER},
   {"Left","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\SashayLeft.ogg","INTERFACE/ICONS/misc_arrowleft", FILTER_OTHER},
@@ -103,10 +98,8 @@ SOUND_TABLE = {
   {"mosquito","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\fkingMosquito.ogg","INTERFACE/ICONS/spell_shadow_carrionswarm",FILTER_WARREN},
   {"clip that","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\clipThat.ogg","INTERFACE/ICONS/trade_archaeology_zinrokh-sword",FILTER_WARREN},
   {"do me","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\doMe.ogg","INTERFACE/ICONS/ability_racial_vulperasurvivalkit",FILTER_DARYN},
-    {"hes coming","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\hesComing.ogg","INTERFACE/ICONS/inv_misc_8xp_balloon_murloc01",FILTER_WARREN},
-    {"mouth","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\twoLilballs.ogg","INTERFACE/ICONS/inv_misc_discoball_01",FILTER_WARREN}
-    
-
+  {"hes coming","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\hesComing.ogg","INTERFACE/ICONS/inv_misc_8xp_balloon_murloc01",FILTER_WARREN},
+  {"mouth","Interface\\AddOns\\ExodusSoundBoard\\Sounds\\twoLilballs.ogg","INTERFACE/ICONS/inv_misc_discoball_01",FILTER_WARREN}
 }
 local appliedFilterTable = {}
 local buttonTable = {}
@@ -145,7 +138,6 @@ frame:SetScript("OnEvent", frame.OnEvent)
 -- setting up slash commands and show/hide functionality
 SLASH_ESB1 = "/ESB"
 SlashCmdList["ESB"] = function(msg)
-  -- printWelcomeMessage()
   if (MainFrame:IsShown()) then
     MainFrame:Hide()
     OptionsFrame:Hide()
