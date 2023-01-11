@@ -9,9 +9,9 @@ Constants.lua
 AddonEventHelper.lua
 SetHelper.lua
 StringHelper.lua
-listener.lua
-uiListener.lua
-main.lua
-onDeath.lua
+ChatListener.lua
+UiListener.lua
+Main.lua
+OnDeath.lua
 VersionChecker.lua
 
